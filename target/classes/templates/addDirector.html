@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<h1>Add a new director:</h1>
+		<form action="/addDirector" method="POST" th:object="${director}">
+			<label for="firstName">First name:</label>
+			<input id="firstName" name="firstName">
+			<label for="lastName">Last name:</label>
+			<input id="lastName" name="lastName">
+			<button type="submit">Add director</button>
+		</form>
+	</body>
+</html>
