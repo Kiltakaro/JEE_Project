@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JEE_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jeeprof/prof/ProfApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/jeeprof/prof/ProfApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/jeeprof/prof/ProfApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/FilmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addFilm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addFilm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/jeeprof/prof/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/jeeprof/prof/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addFilm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addFilm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +25,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2X13hn9R52qBCbLi7Izh5kPqLEz" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -41,6 +45,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697782880973</updated>
-      <workItem from="1697782881821" duration="315000" />
+      <workItem from="1697782881821" duration="1887000" />
     </task>
     <servers />
   </component>
