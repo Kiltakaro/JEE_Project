@@ -16,6 +16,14 @@ public class Film {
 	@ManyToOne
 	private Director director;
 	
+    private String imageURL;
+	
+	public String getImageURL() {
+		return imageURL;
+	}
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
+	}
 	public String getTitle() {
 		return title;
 	}
