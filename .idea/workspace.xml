@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Critic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,26 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dorian&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/cytech/Cours/Project/JEE_Project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dorian",
+    "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.CoursJeeApplication">
     <configuration name="tqt" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="temurin-21" />
@@ -90,7 +89,7 @@
       <updated>1697782880973</updated>
       <workItem from="1697782881821" duration="1887000" />
       <workItem from="1698015232405" duration="78000" />
-      <workItem from="1698015335332" duration="1949000" />
+      <workItem from="1698015335332" duration="2383000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
@@ -100,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698017056247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Change of name for the Critic class (from Critic to Review)">
+      <option name="closed" value="true" />
+      <created>1698017390300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017390300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)">
+      <option name="closed" value="true" />
+      <created>1698017558470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017558470</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Database tables added (without being linked yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database tables added (without being linked yet)" />
+    <MESSAGE value="Change of name for the Critic class (from Critic to Review)" />
+    <MESSAGE value="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)" />
   </component>
 </project>
