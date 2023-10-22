@@ -3,6 +3,10 @@ package database;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
 
@@ -22,6 +26,10 @@ public class User {
 
     // Type of user
     private String type;
+
+    // One user can have many reviews
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
 
     public Long getId() {
         return id;

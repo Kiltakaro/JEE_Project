@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,7 @@
       <updated>1697782880973</updated>
       <workItem from="1697782881821" duration="1887000" />
       <workItem from="1698015232405" duration="78000" />
-      <workItem from="1698015335332" duration="2383000" />
+      <workItem from="1698015335332" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
@@ -115,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698017558470</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add of getters and setters for the User class (forgotten before)">
+      <option name="closed" value="true" />
+      <created>1698017751687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017751687</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
     <MESSAGE value="Database tables added (without being linked yet)" />
     <MESSAGE value="Change of name for the Critic class (from Critic to Review)" />
     <MESSAGE value="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)" />
+    <MESSAGE value="add of getters and setters for the User class (forgotten before)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add of getters and setters for the User class (forgotten before)" />
   </component>
 </project>
