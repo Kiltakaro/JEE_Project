@@ -3,7 +3,7 @@ package database;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-public class Critic {
+public class Review {
 
 
     @GeneratedValue @Id

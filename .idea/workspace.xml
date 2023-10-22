@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="Database tables added (without being linked yet)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/Anime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/Critic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Critic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,8 +90,17 @@
       <updated>1697782880973</updated>
       <workItem from="1697782881821" duration="1887000" />
       <workItem from="1698015232405" duration="78000" />
-      <workItem from="1698015335332" duration="1602000" />
+      <workItem from="1698015335332" duration="1949000" />
     </task>
+    <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
+      <option name="closed" value="true" />
+      <created>1698017056247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017056247</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
