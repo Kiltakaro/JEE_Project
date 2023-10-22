@@ -3,6 +3,10 @@ package database;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -26,6 +30,11 @@ public class Anime {
 
     // Studio
     private String studio;
+
+
+    // One anime can have many reviews
+    @OneToMany(mappedBy = "anime")
+    private List<Review> reviews = new ArrayList<>();
 
     public Long getId() {
         return id;

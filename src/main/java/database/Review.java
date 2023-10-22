@@ -1,10 +1,9 @@
 package database;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
+
+@Entity
 public class Review {
 
 
@@ -27,6 +26,12 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+
+    // One review is written for one anime
+    @ManyToOne
+    @JoinColumn(name = "anime_id")
+    private Anime anime;
 
 
     public Long getId() {
@@ -76,5 +81,14 @@ public class Review {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+
+    public Anime getAnime() {
+        return anime;
+    }
+
+    public void setAnime(Anime anime) {
+        this.anime = anime;
     }
 }
