@@ -1,12 +1,11 @@
 package database;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -40,6 +39,16 @@ public class Anime {
     // One anime can have many characters (at least 1)
     @OneToMany(mappedBy = "anime")
     private List<Character> characters = new ArrayList<>();
+
+
+    // One anime can have many tags
+    @ManyToMany
+    @JoinTable(
+            name = "anime_tag",
+            joinColumns = @JoinColumn(name = "anime_id"),
+            inverseJoinColumns = @JoinColumn(name = "tag_id")
+    )
+    private Set<Tag> tags = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -97,7 +106,6 @@ public class Anime {
         this.studio = studio;
     }
 
-
     public List<Review> getReviews() {
         return reviews;
     }
@@ -105,7 +113,6 @@ public class Anime {
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
     }
-
 
     public List<Character> getCharacters() {
         return characters;
@@ -115,4 +122,11 @@ public class Anime {
         this.characters = characters;
     }
 
+    public Set<Tag> getTags() {
+        return tags;
+    }
+
+    public void setTags(Set<Tag> tags) {
+        this.tags = tags;
+    }
 }
