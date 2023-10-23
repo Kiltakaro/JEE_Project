@@ -36,6 +36,11 @@ public class Anime {
     @OneToMany(mappedBy = "anime")
     private List<Review> reviews = new ArrayList<>();
 
+
+    // One anime can have many characters (at least 1)
+    @OneToMany(mappedBy = "anime")
+    private List<Character> characters = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
@@ -91,4 +96,23 @@ public class Anime {
     public void setStudio(String studio) {
         this.studio = studio;
     }
+
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+
+    public List<Character> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(List<Character> characters) {
+        this.characters = characters;
+    }
+
 }
