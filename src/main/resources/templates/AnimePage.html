@@ -1,0 +1,38 @@
+<div th:replace="~{/common/head.html}"></div>
+
+<body>
+<div th:replace="~{/common/header.html}"></div>
+
+    <div class="tile">
+        <div class="tile-image" style="background-image: url('/img/snk.png');"></div>
+        <div class="tile-title">SNK</div>
+        <div class="informations ml-2">
+        Saison:<br>
+        Date de sortie: <br>
+        Studio: <br>
+
+        </div>
+    </div>
+
+<div class="bg-light p-5">
+    <div>Rank:</div>
+    <div>Synopsis: </div>
+    <div>Personnages:
+        <div> personnage 1</div>
+    </div>
+</div>
+
+<div class="bg-light">
+    <h1>Critiques:</h1>
+    <!--bootstrap bouton ajouter critique:-->
+    <button type="button" class="btn btn-primary" >
+        Ajouter une critique
+    </button>
+    <div>
+        <!-- affichage critique -->
+
+    </div>
+</div>
+
+<div th:replace="~{/common/footer.html}"></div>
+</body>
