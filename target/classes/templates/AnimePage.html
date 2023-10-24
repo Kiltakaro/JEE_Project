@@ -1,37 +1,39 @@
 <div th:replace="~{/common/head.html}"></div>
-
 <body>
 <div th:replace="~{/common/header.html}"></div>
-
-    <div class="tile">
-        <div class="tile-image" style="background-image: url('/img/snk.png');"></div>
-        <div class="tile-title">SNK</div>
-        <div class="informations ml-2">
-        Saison:<br>
-        Date de sortie: <br>
-        Studio: <br>
-
+<div class="container bg-light">
+    <h1 class="border-bottom pb-3">Shingeki No Kyojin</h1>
+<div class="row">
+    <div class="col-md-3 leftside">
+        <div class="tile">
+            <div class="tile-image" style="background-image: url('/img/snk.png');"></div>
+                <ul class="list-group list-group-flush">
+                    <li class="bg-light list-group-item">Titre:</li>
+                    <li class="bg-light list-group-item">Saisons:</li>
+                    <li class="bg-light list-group-item">Date de sortie:</li>
+                    <li class="bg-light list-group-item">Studio:</li>
+                </ul>
         </div>
     </div>
+    <div class="col-md-8 rightside">
 
-<div class="bg-light p-5">
-    <div>Rank:</div>
-    <div>Synopsis: </div>
-    <div>Personnages:
-        <div> personnage 1</div>
+        <div class="border">Rank:</div>
+        <div class="border">Synopsis: </div>
+        <div class="border">Personnages:
+            <div> perso 1</div>
+        </div>
+        <div class="border">
+            <h1>Critiques:</h1>
+            <button type="button" class="btn btn-primary" >
+                Ajouter une critique
+            </button>
+            <div>
+                <!-- affichage critique -->
+
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="bg-light">
-    <h1>Critiques:</h1>
-    <!--bootstrap bouton ajouter critique:-->
-    <button type="button" class="btn btn-primary" >
-        Ajouter une critique
-    </button>
-    <div>
-        <!-- affichage critique -->
-
-    </div>
 </div>
 
 <div th:replace="~{/common/footer.html}"></div>
