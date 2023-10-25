@@ -26,11 +26,14 @@ public class FilmController {
 		
 		return "addFilm";
 	}
+
 	
+
 	@PostMapping("/addFilm")
-	public String addFilm(String title,Long directorId) {
+	public String addFilm(String title,Long directorId, String imageURL) {
 		System.out.println("title:"+title);
 		System.out.println("id:"+directorId);
+		System.out.println("URL:"+imageURL);
 		Optional<Director> director = directorRepo.findById(directorId);
 		if(director.isEmpty()) {
 			System.out.println("director not found");
@@ -38,6 +41,7 @@ public class FilmController {
 		}
 		Film film = new Film();
 		film.setTitle(title);
+	    film.setImageURL(imageURL); 
 		film.setDirector(director.get());
 		filmrepo.save(film);
 		
