@@ -5,13 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AccueilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AccueilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/afficheTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/afficheTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/Anime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/Character.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/CharacterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/ReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/t2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AccueilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AccueilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AfficheTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AfficheTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AnimePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/CoursJeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/CoursJeeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/DirectorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/DirectorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Film.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/FilmController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/FilmRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/AccueilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/AccueilController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/AfficheTestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/AnimePageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/CoursJeeApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Director.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Film.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/86.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/COTE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/DRSTONE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/FMAB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/FRIEREN.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/GINTAMA.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/HxH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/KAGUYASAMA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/MHA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/MyAnimeMap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/ONEPIECE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/STEINSGATE.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/snk.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/AnimePage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/afficheTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/afficheTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/head.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/header.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
