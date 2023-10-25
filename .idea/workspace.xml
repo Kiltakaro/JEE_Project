@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/CoursJeeApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Director.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Film.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AccueilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/AccueilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/afficheTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/afficheTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Accueil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CoursJeeApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "yani",
     "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
