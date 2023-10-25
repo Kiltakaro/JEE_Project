@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/register")
     public String showRegistrationForm() {
-        return "registration"; // Assuming "registration" is your Thymeleaf template
+        return "registration"; 
     }
 
     @PostMapping("/register")
@@ -32,19 +32,17 @@ public class UserController {
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login"; // Assuming "login" is your Thymeleaf template
+        return "login";
     }
 
     @PostMapping("/login")
     public String loginUser(@RequestParam String username, @RequestParam String password) {
-        User user = userRepository.findByUsername(username);
-        
+        User user = userRepository.findByUsername(username);       
         if (user != null && user.getPassword().equals(password)) {
-            // Store a flag in the session to identify the user as logged in
-            session.setAttribute("user", user);
-            return "redirect:/afficheTest"; // Redirect to a protected dashboard page
+            session.setAttribute("user", user); // MET EN PLACE LA SESSION
+            return "redirect:/afficheTest"; 
         } else {
-            return "redirect:/login?error"; // Redirect back to the login page with an error message
+            return "redirect:/login?error"; 
         }
     }
 }

@@ -26,7 +26,6 @@ public class FilmController {
 		
 		return "addFilm";
 	}
-
 	
 
 	@PostMapping("/addFilm")
