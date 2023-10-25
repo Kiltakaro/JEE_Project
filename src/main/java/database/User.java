@@ -20,9 +20,8 @@ public class User {
     private String password;
     private String type;
     
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user_account")
     private List<Review> reviews = new ArrayList<>();
-    
     
 	public String getUsername() {
 		return username;
