@@ -17,7 +17,7 @@ public class UserController {
 
     @GetMapping("/register")
     public String showRegistrationForm() {
-        return "registration"; // Assuming "registration" is your Thymeleaf template
+        return "register"; // Assuming "registration" is your Thymeleaf template
     }
 
     @PostMapping("/register")
