@@ -1,0 +1,17 @@
+<html>
+	<body>
+		<h1>Add a new film:</h1>
+		<form action="/addFilm" method="POST">
+			<label for="title">Title:</label>
+			<input id="title" name="title">
+			<label for="director">Director:</label>
+			<select id="director" name="directorId">
+				<option th:each="dir : ${directors}" th:value="${dir.id}">
+					<span th:text="${dir.firstName}"></span> 
+					<span th:text="${dir.lastName}"></span>
+				</option>
+			</select>
+			<button type="submit">Add film</button>
+		</form>
+	</body>
+</html>
