@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/CharacterRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Anime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/Review.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,9 @@
       <workItem from="1698015335332" duration="4080000" />
       <workItem from="1698053350874" duration="3466000" />
       <workItem from="1698063262398" duration="37000" />
-      <workItem from="1698063416900" duration="1371000" />
+      <workItem from="1698063416900" duration="1876000" />
+      <workItem from="1698154807829" duration="765000" />
+      <workItem from="1698227476862" duration="1725000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
@@ -164,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698019309856</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add of Tag class of db">
+      <option name="closed" value="true" />
+      <created>1698073961535</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698073961535</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +198,7 @@
     <MESSAGE value="add links between Review and User tables (one user can have many reviews, and one review is written by a unique user)" />
     <MESSAGE value="add links between Anime and Review &#10;&#10;correction of the two classes (@Entity forgotten)" />
     <MESSAGE value="add links between Character and Anime (+ missing getters and setters)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add links between Character and Anime (+ missing getters and setters)" />
+    <MESSAGE value="add of Tag class of db" />
+    <option name="LAST_COMMIT_MESSAGE" value="add of Tag class of db" />
   </component>
 </project>
