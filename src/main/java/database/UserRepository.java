@@ -1,12 +1,7 @@
-package database;
-
-import java.util.List;
+package fr.shiftit.cours.tp;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface UserRepository extends JpaRepository<User, Long>{
-
-    List<User> findByUsername(String lastName);
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
 }
