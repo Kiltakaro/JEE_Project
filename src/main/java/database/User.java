@@ -32,9 +32,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-    public List<Review> getReviews() {
-        return reviews;
-    }
     public String getType() {
         return type;
     }
