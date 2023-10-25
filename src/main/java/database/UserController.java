@@ -17,22 +17,24 @@ public class UserController {
 
     @GetMapping("/register")
     public String showRegistrationForm() {
-        return "register"; // Assuming "registration" is your Thymeleaf template
+        return "register"; 
     }
 
     @PostMapping("/register")
-    public String registerUser(@RequestParam String username, @RequestParam String password) {
+    public String registerUser(@RequestParam String username, @RequestParam String email, @RequestParam String password) {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password); // Note: Insecure for production
-
+        user.setEmail(email);
+        user.setType("user");
+        
         userRepository.save(user);
         return "redirect:/login";
     }
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login"; // Assuming "login" is your Thymeleaf template
+        return "login"; 
     }
 
     @PostMapping("/login")
