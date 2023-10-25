@@ -19,10 +19,7 @@ public class User {
     private String username;
     private String password;
     private String type;
-    
-    @OneToMany(mappedBy = "user_account")
-    private List<Review> reviews = new ArrayList<>();
-    
+   
 	public String getUsername() {
 		return username;
 	}
@@ -44,9 +41,5 @@ public class User {
 
     public void setType(String type) {
         this.type = type;
-    }
-    
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
     }
 }

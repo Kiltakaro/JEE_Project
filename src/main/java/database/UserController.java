@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
@@ -19,7 +17,7 @@ public class UserController {
 
     @GetMapping("/register")
     public String showRegistrationForm() {
-        return "register";
+        return "registration"; // Assuming "registration" is your Thymeleaf template
     }
 
     @PostMapping("/register")
@@ -27,26 +25,26 @@ public class UserController {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password); // Note: Insecure for production
-        user.setType("user");
+
         userRepository.save(user);
         return "redirect:/login";
     }
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login";
+        return "login"; // Assuming "login" is your Thymeleaf template
     }
 
     @PostMapping("/login")
     public String loginUser(@RequestParam String username, @RequestParam String password) {
-        User user = userRepository.findByUsername(username);       
+        User user = userRepository.findByUsername(username);
+        
         if (user != null && user.getPassword().equals(password)) {
-            session.setAttribute("user", user); // MET EN PLACE LA SESSION
-            return "redirect:/afficheTest"; 
+            // Store a flag in the session to identify the user as logged in
+            session.setAttribute("user", user);
+            return "redirect:/afficheTest"; // Redirect to a protected dashboard page
         } else {
-            return "redirect:/login?error"; 
+            return "redirect:/login?error"; // Redirect back to the login page with an error message
         }
     }
-
 }
-
