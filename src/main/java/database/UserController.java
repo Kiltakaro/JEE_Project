@@ -44,7 +44,7 @@ public class UserController {
         if (user != null && user.getPassword().equals(password)) {
             // Store a flag in the session to identify the user as logged in
             session.setAttribute("user", user);
-            return "redirect:/afficheTest"; // Redirect to a protected dashboard page
+            return "redirect:/Accueil"; 
         } else {
             return "redirect:/login?error"; // Redirect back to the login page with an error message
         }
