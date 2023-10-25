@@ -25,7 +25,7 @@ public class UserController {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password); // Note: Insecure for production
-
+        user.setType("user");
         userRepository.save(user);
         return "redirect:/login";
     }
