@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class AnimeController {
 
     @Autowired
-    AnimeRepository animeRepository;
+    AnimeService animeService;
 
-    @GetMapping("/addAnime")
+    @GetMapping("/anime/form")
     public String showAnimeForm(Model model) {
-
-        return "addAnime";
+        model.addAttribute("anime", new Anime());
+        return "anime-form";
     }
 
-    @PostMapping("/addAnime")
-    public String addAnime(@ModelAttribute Anime anime) {
+    @PostMapping("/anime/save")
+    public String addAnime(@ModelAttribute("anime") Anime anime) {
 
         System.out.println("dir:"+anime);
-        animeRepository.save(anime);
+        animeService.save(anime);
 
-        return "redirect:/addAnime";
+        return "redirect:/anime/form";
     }
 }
