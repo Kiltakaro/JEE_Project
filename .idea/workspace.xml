@@ -84,7 +84,7 @@
     </configuration>
     <configuration name="CoursJeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="prof" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="fr.shiftit.cours.tp.CoursJeeApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="database.CoursJeeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
