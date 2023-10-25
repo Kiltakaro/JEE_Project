@@ -1,0 +1,51 @@
+/* Style de base pour les tuiles */
+.tile {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+/* Style de l'image de fond */
+.tile-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre de la tuile */
+.tile-title {
+    padding: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rating-box {
+    position:relative;
+    left: 25px;
+    vertical-align: middle;
+    font-size: 2em;
+    font-family: FontAwesome;
+    display:inline-block;
+    color: #ffc107;
+    background-color: #f5f5f5;
+}
+.rating-box:before{
+    content: "\f006 \f006 \f006 \f006 \f006";
+}
+.rating-box .rating {
+    position: absolute;
+    top:0;
+    white-space:nowrap;
+    overflow:hidden;
+    color: #ffc107;
+}
+.rating-box .rating:before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+}

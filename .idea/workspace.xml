@@ -5,15 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JEE_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jeeprof/prof/ProfApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/jeeprof/prof/ProfApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/jeeprof/prof/ProfApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fr/shiftit/cours/tp/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/CoursJeeApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Director.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/DirectorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/Film.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fr/shiftit/cours/tp/FilmRepository.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,9 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2X13hn9R52qBCbLi7Izh5kPqLEz" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
@@ -40,7 +59,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "yani",
     "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
@@ -74,7 +99,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697782880973</updated>
-      <workItem from="1697782881821" duration="315000" />
+      <workItem from="1697782881821" duration="1887000" />
+      <workItem from="1698062992294" duration="1524000" />
+      <workItem from="1698087682577" duration="1908000" />
     </task>
     <servers />
   </component>
