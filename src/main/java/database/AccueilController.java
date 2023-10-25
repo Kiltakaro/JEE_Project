@@ -12,10 +12,10 @@ import java.util.List;
 @Controller
 public class AccueilController {
     @Autowired
-    private FilmRepository filmRepository;
+    private AnimeRepository animeRepository;
     @GetMapping("/Accueil")
     public String Accueil(Model model) {
-        List<Film> films = filmRepository.findAll();
+        List<Anime> films = animeRepository.findAll();
 
         model.addAttribute("films", films);
 
