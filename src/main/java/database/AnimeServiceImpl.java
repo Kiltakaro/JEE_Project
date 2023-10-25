@@ -1,13 +1,20 @@
 package database;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class AnimeServiceImpl implements AnimeService {
 
+    private final AnimeRepository animeRepository;
+
     @Autowired
-    private AnimeRepository animeRepository;
+    public AnimeServiceImpl(AnimeRepository animeRepository) {
+        this.animeRepository = animeRepository;
+    }
 
     @Override
     public void save(Anime anime) {

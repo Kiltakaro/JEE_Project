@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class AnimeController {
 
+    final AnimeService animeService;
+
     @Autowired
-    AnimeService animeService;
+    public AnimeController(AnimeService animeService) {
+        this.animeService = animeService;
+    }
 
     @GetMapping("/anime/form")
     public String showAnimeForm(Model model) {
