@@ -1,4 +1,4 @@
-package fr.shiftit.cours.tp;
+package database;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
