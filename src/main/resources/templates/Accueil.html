@@ -9,9 +9,9 @@
 </div>-->
 <div th:each="film : ${films}" class="tile">
     <img th:src="${film.imageURL}" class="tile-image"/>
-    <div class="tile-title" th:text="${film.title}"></div>
+    <div class="tile-title" th:text="${film.name}"></div>
     <div class="rating-box">
-        <div class="rating" style="width:70%;"></div>
+        <div class="rating" th:style="'width: ' + ${film.rating}*10 + '%;'"></div>
     </div>
 </div>
 
