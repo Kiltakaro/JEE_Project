@@ -13,17 +13,17 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "user_account") // Change "user" to "user_account"
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String username;
-    private String password;
-    private String email;
-    private String type;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String username;
+	private String password;
+	private String email;
+	private String type;
 
-    @OneToMany(mappedBy = "user")
-    private List<Review> reviews = new ArrayList<>();
-   
+	@OneToMany(mappedBy = "user")
+	private List<Review> reviews = new ArrayList<>();
+
 	public String getUsername() {
 		return username;
 	}
@@ -36,11 +36,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-    public String getType() {
-        return type;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public Long getId() {
+	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
@@ -53,8 +53,7 @@ public class User {
 		this.email = email;
 	}
 	public void setType(String type) {
-        this.type = type;
-    }
+		this.type = type;
+	}
 }
-
 

@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +16,31 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ChomeMecho &lt;cornec.dorian@orange.fr&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -37,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -45,6 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.CoursJeeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MyAnimeMapApplication.executor&quot;: &quot;Run&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;yani&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -58,13 +76,35 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="CoursJeeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MyAnimeMapApplication">
+    <configuration name="tqt" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="prof" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="database.CoursJeeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyAnimeMapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="temurin-21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="prof" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="database.MyAnimeMapApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="database.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,9 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.tqt" />
+      <item itemvalue="Spring Boot.MyAnimeMapApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CoursJeeApplication" />
+        <item itemvalue="Spring Boot.MyAnimeMapApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -94,15 +138,126 @@
       <option name="presentableId" value="Default" />
       <updated>1697782880973</updated>
       <workItem from="1697782881821" duration="1887000" />
-      <workItem from="1698062992294" duration="1524000" />
-      <workItem from="1698087682577" duration="1908000" />
-      <workItem from="1698235666995" duration="1505000" />
-      <workItem from="1698237335227" duration="7455000" />
-      <workItem from="1698300401416" duration="57000" />
+      <workItem from="1698015232405" duration="78000" />
+      <workItem from="1698015335332" duration="4080000" />
+      <workItem from="1698053350874" duration="3466000" />
+      <workItem from="1698063262398" duration="37000" />
+      <workItem from="1698063416900" duration="1876000" />
+      <workItem from="1698154807829" duration="765000" />
+      <workItem from="1698227476862" duration="2456000" />
+      <workItem from="1698268712182" duration="81000" />
+      <workItem from="1698268805296" duration="2107000" />
+      <workItem from="1698300480627" duration="67000" />
+      <workItem from="1698350763569" duration="1932000" />
     </task>
+    <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
+      <option name="closed" value="true" />
+      <created>1698017056247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017056247</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Change of name for the Critic class (from Critic to Review)">
+      <option name="closed" value="true" />
+      <created>1698017390300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017390300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)">
+      <option name="closed" value="true" />
+      <created>1698017558470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017558470</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add of getters and setters for the User class (forgotten before)">
+      <option name="closed" value="true" />
+      <created>1698017751687</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698017751687</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add links between Review and User tables (one user can have many reviews, and one review is written by a unique user)">
+      <option name="closed" value="true" />
+      <created>1698018294639</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698018294639</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add links between Anime and Review &#10;&#10;correction of the two classes (@Entity forgotten)">
+      <option name="closed" value="true" />
+      <created>1698018699748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698018699748</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add links between Character and Anime (+ missing getters and setters)">
+      <option name="closed" value="true" />
+      <created>1698019309856</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698019309856</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add of Tag class of db">
+      <option name="closed" value="true" />
+      <created>1698073961535</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698073961535</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add of repository classes and AnimeController">
+      <option name="closed" value="true" />
+      <created>1698223441455</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698223441455</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository">
+      <option name="closed" value="true" />
+      <created>1698245270384</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698245270384</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Database tables added (without being linked yet)" />
+    <MESSAGE value="Change of name for the Critic class (from Critic to Review)" />
+    <MESSAGE value="add of uiDesigner.xml (not sure that it will be used since not everyone uses IntellijIdea)" />
+    <MESSAGE value="add of getters and setters for the User class (forgotten before)" />
+    <MESSAGE value="add links between Review and User tables (one user can have many reviews, and one review is written by a unique user)" />
+    <MESSAGE value="add links between Anime and Review &#10;&#10;correction of the two classes (@Entity forgotten)" />
+    <MESSAGE value="add links between Character and Anime (+ missing getters and setters)" />
+    <MESSAGE value="add of Tag class of db" />
+    <MESSAGE value="add of repository classes and AnimeController" />
+    <MESSAGE value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
   </component>
 </project>
