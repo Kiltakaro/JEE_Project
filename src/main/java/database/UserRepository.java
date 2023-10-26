@@ -1,4 +1,4 @@
-package fr.shiftit.cours.tp;
+package database;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

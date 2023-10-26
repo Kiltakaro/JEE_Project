@@ -1,4 +1,4 @@
-package fr.shiftit.cours.tp;
+package database;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AfficheTestController {
 
     @Autowired
-    private FilmRepository filmRepository; // Supposons que vous avez un FilmRepository
+    private AnimeRepository animeRepository; // Supposons que vous avez un FilmRepository
 
     @GetMapping("/afficheTest")
     public String afficheTousLesFilms(Model model) {
-        List<Film> films = filmRepository.findAll();
+        List<Anime> films = animeRepository.findAll();
 
         model.addAttribute("films", films);
 

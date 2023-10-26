@@ -1,9 +1,13 @@
-package fr.shiftit.cours.tp;
+package database;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +18,12 @@ public class User {
     private Long id;
     private String username;
     private String password;
+    private String email;
+    private String type;
+
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews = new ArrayList<>();
+   
 	public String getUsername() {
 		return username;
 	}
@@ -26,7 +36,25 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+    public String getType() {
+        return type;
+    }
 
-
-    // Getters and setters
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public void setType(String type) {
+        this.type = type;
+    }
 }
+
+

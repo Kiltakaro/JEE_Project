@@ -1,4 +1,4 @@
-package fr.shiftit.cours.tp;
+package database;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,22 +17,24 @@ public class UserController {
 
     @GetMapping("/register")
     public String showRegistrationForm() {
-        return "registration"; // Assuming "registration" is your Thymeleaf template
+        return "register"; 
     }
 
     @PostMapping("/register")
-    public String registerUser(@RequestParam String username, @RequestParam String password) {
+    public String registerUser(@RequestParam String username, @RequestParam String email, @RequestParam String password) {
         User user = new User();
         user.setUsername(username);
         user.setPassword(password); // Note: Insecure for production
-
+        user.setEmail(email);
+        user.setType("user");
+        
         userRepository.save(user);
         return "redirect:/login";
     }
 
     @GetMapping("/login")
     public String showLoginForm() {
-        return "login"; // Assuming "login" is your Thymeleaf template
+        return "login"; 
     }
 
     @PostMapping("/login")
@@ -42,10 +44,9 @@ public class UserController {
         if (user != null && user.getPassword().equals(password)) {
             // Store a flag in the session to identify the user as logged in
             session.setAttribute("user", user);
-            return "redirect:/afficheTest"; // Redirect to a protected dashboard page
+            return "redirect:/Accueil"; 
         } else {
             return "redirect:/login?error"; // Redirect back to the login page with an error message
         }
     }
 }
-

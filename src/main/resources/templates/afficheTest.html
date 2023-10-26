@@ -1,17 +1,17 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Afficher les Films</title>
 </head>
+
 <body>
     <h1>Liste des Films</h1>
-
     <table>
         <tr>
             <th>Titre</th>
             <th>Réalisateur</th>
         </tr>
-        
         <!-- Boucle pour afficher tous les films -->
         <tr th:each="film : ${films}">
             <td th:text="${film.title}"></td>
