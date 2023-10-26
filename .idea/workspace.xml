@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/CoursJeeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/MyAnimeMapApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +143,7 @@
       <workItem from="1698227476862" duration="2456000" />
       <workItem from="1698268712182" duration="81000" />
       <workItem from="1698268805296" duration="2107000" />
+      <workItem from="1698300480627" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
