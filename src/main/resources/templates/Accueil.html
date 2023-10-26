@@ -2,26 +2,26 @@
 <body>
 <div th:replace="~{/common/header.html}"></div>
 <h2>Sortie récente</h2>
-<!--
-<div th:each="anime : ${recentlyAiredAnimes}" class="tile">
-    <div class="tile-image" th:style="'background-image: url(' + ${anime.imagePath} + ');'"></div>
-    <div class="tile-title" th:text="${anime.title}"></div>
-</div>-->
-<div th:each="film : ${films}" class="tile">
+
+<div th:each="film : ${recentAnimes}" class="tile">
     <img th:src="${film.imageURL}" class="tile-image"/>
     <div class="tile-title" th:text="${film.name}"></div>
     <div class="rating-box">
-        <div class="rating" th:style="'width: ' + ${film.rating}*10 + '%;'"></div>
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
     </div>
 </div>
 
 <h2> Les mieux notées</h2>
-<!--
-<div th:each="anime : ${topRatedAnimes}" class="tile">
-    <div class="tile-image" th:style="'background-image: url(' + ${anime.imagePath} + ');'"></div>
-    <div class="tile-title" th:text="${anime.name}"></div>
-</div>-->
 
+<div th:each="film : ${topRatedAnimes}" class="tile">
+    <img class="tile-image" th:src="${film.imageURL}" />
+    <div class="tile-title" th:text="${film.name}"></div>
+    <div class="rating-box">
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
+    </div>
+</div>
+
+<!--
 <div class="tile">
     <div class="tile-image" style="background-image: url('/img/FMAB.jpg');"></div>
     <div class="tile-title">FMAB</div>
@@ -71,7 +71,7 @@
         <div class="rating" style="width:92%;"></div>
     </div>
 </div>
-
+-->
 
 <div th:replace="~{/common/footer.html}"></div>
 </body>
