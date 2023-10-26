@@ -10,21 +10,25 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class AnimeController {
 
+    final AnimeService animeService;
+
     @Autowired
-    AnimeRepository animeRepository;
-
-    @GetMapping("/addAnime")
-    public String showAnimeForm(Model model) {
-
-        return "addAnime";
+    public AnimeController(AnimeService animeService) {
+        this.animeService = animeService;
     }
 
-    @PostMapping("/addAnime")
-    public String addAnime(@ModelAttribute Anime anime) {
+    @GetMapping("/anime/form")
+    public String showAnimeForm(Model model) {
+        model.addAttribute("anime", new Anime());
+        return "anime-form";
+    }
+
+    @PostMapping("/anime/save")
+    public String addAnime(@ModelAttribute("anime") Anime anime) {
 
         System.out.println("dir:"+anime);
-        animeRepository.save(anime);
+        animeService.save(anime);
 
-        return "redirect:/addAnime";
+        return "redirect:/anime/form";
     }
 }

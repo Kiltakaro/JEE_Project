@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface AnimeRepository extends JpaRepository<Anime, Long>{
 
     List<Anime> findByName(String lastName);
+
 }
