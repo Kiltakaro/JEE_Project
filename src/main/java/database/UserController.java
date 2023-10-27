@@ -45,7 +45,7 @@ public class UserController {
             session.setAttribute("user", user);
             return "redirect:/Accueil";
         } else {
-            return "redirect:/login?error"; // Redirect back to the login page with an error message
+            return "redirect:/login?error";
         }
     }
 }

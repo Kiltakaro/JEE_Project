@@ -24,13 +24,18 @@
             </button>
         </form>
 
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto"  th:if="${session.user == null}">
             <li class="nav-item">
-                <a class="nav-link" href="#">Se connecter</a>
+                <a class="nav-link" href="/login">Se connecter</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Créer un compte</a>
+                <a class="nav-link" href="/register">Créer un compte</a>
             </li>
+        </ul>
+        <ul class="navbar-nav ml-auto"  th:if="${session.user != null}">
+            <li class="nav-item">
+        		<a class="nav-link" href="/logout">Déconnexion</a>
+    		</li>
         </ul>
     </nav>
 </header>
