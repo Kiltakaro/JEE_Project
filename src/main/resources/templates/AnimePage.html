@@ -8,19 +8,22 @@
         <div class="tile">
             <img th:src="${anime.imageURL}" class="tile-image"/>
             <ul class="list-group list-group-flush">
-                    <li class="bg-light list-group-item">Titre:</li>
-                    <li class="bg-light list-group-item">Saisons:</li>
-                    <li class="bg-light list-group-item">Date de sortie:</li>
-                    <li class="bg-light list-group-item">Studio:</li>
-                </ul>
+                <li class="bg-light list-group-item">Titre: <span th:text="${anime.name}"></span></li>
+                <li class="bg-light list-group-item">Saisons:</li>
+                <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
+                <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
+            </ul>
         </div>
     </div>
     <div class="col-md-8 rightside">
-
-        <div class="border">Rank:</div>
-        <div class="border">Synopsis: </div>
+        <div class="border">Rank: </div>
+        <div class="border">Synopsis: <span th:text="${anime.description}"></span></div>
         <div class="border">Personnages:
-            <div> perso 1</div>
+            <div>
+                <!--
+                <span th:each="character : ${anime.characters}" th:text="${character.name}"></span>
+                -->
+            </div>
         </div>
         <div class="border">
             <h2 class="ml-2 mt-2">Critiques:</h2>
