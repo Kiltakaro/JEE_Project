@@ -1,37 +1,40 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Enregistrer un Anime</title>
-</head>
+<div th:replace="~{/common/head.html}"></div>
 <body>
-<h1>Enregistrer un Anime</h1>
-<form th:action="@{/anime/save}" th:object="${anime}" method="post">
-    <div>
-        <label for="name">Nom :</label>
-        <input type="text" id="name" th:field="*{name}" required>
+    <div th:replace="~{/common/header.html}"></div>
+    <div class="container mt-4" th:if="${session.user.getType().equals('admin')}">
+        <h1 class="mb-4 text-center">Enregistrer un Anime</h1>
+        <div class="d-flex justify-content-center">
+            <form th:action="@{/anime/save}" th:object="${anime}" method="post" style="width: 60%;">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" th:field="*{name}" class="form-control form-control-lg" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description :</label>
+                    <textarea id="description" th:field="*{description}" class="form-control" style="height: 200px;" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Note :</label>
+                    <input type="number" id="rating" th:field="*{rating}" class="form-control form-control-lg" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageURL">URL de l'image :</label>
+                    <input type="text" id="imageURL" th:field="*{imageURL}" class="form-control form-control-lg" required>
+                </div>
+                <div class="form-group">
+                    <label for="releaseDate">Date de sortie :</label>
+                    <input type="text" id="releaseDate" th:field="*{releaseDate}" class="form-control form-control-lg" required>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Enregistrer</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div>
-        <label for="description">Description :</label>
-        <textarea id="description" th:field="*{description}" required></textarea>
-    </div>
-    <div>
-        <label for="rating">Note :</label>
-        <input type="number" id="rating" th:field="*{rating}" required>
-    </div>
-    <div>
-        <label for="imageURL">URL de l'image :</label>
-        <input type="text" id="imageURL" th:field="*{imageURL}" required>
-    </div>
-    <div>
-        <label for="releaseDate">Date de sortie :</label>
-        <input type="text" id="releaseDate" th:field="*{releaseDate}" required>
-    </div>
-    <div>
-        <label for="studio">Studio :</label>
-        <input type="text" id="studio" th:field="*{studio}" required>
-    </div>
-    <button type="submit">Enregistrer</button>
-</form>
+	<div class="container mt-4" th:if="${session.user.getType().equals('user')}">
+   		<h1 style="color: red; text-align: center; font-weight: bold;">Vous n'avez pas accès à cette page</h1>
+	</div>
+
+
+	<div class="fixed-bottom" th:insert="~{/common/footer.html}"></div>
 </body>
-</html>

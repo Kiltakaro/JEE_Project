@@ -11,7 +11,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user_account") // Change "user" to "user_account"
+@Table(name = "user_account") // Cannot use "user"
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
