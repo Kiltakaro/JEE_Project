@@ -19,7 +19,7 @@ public class Anime {
 
     private String description;
 
-    private int rating;
+    private double rating;
 
     private String imageURL;
 
@@ -43,11 +43,11 @@ public class Anime {
 
     // One anime can have many tags
     @ManyToMany
-    @JoinTable(
-            name = "anime_tag",
-            joinColumns = @JoinColumn(name = "anime_id"),
-            inverseJoinColumns = @JoinColumn(name = "tag_id")
-    )
+//    @JoinTable(
+//            name = "anime_tag",
+//            joinColumns = @JoinColumn(name = "anime_id"),
+//            inverseJoinColumns = @JoinColumn(name = "tag_id")
+//    )
     private Set<Tag> tags = new HashSet<>();
 
     public Long getId() {
@@ -74,7 +74,7 @@ public class Anime {
         this.description = description;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 

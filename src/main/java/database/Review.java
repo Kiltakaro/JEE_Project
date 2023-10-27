@@ -24,13 +24,13 @@ public class Review {
 
     // One review is written by one user
     @ManyToOne
-    @JoinColumn(name = "user_id")
+//    @JoinColumn(name = "user_id")
     private User user;
 
 
     // One review is written for one anime
     @ManyToOne
-    @JoinColumn(name = "anime_id")
+//    @JoinColumn(name = "anime_id")
     private Anime anime;
 
 

@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AccueilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AccueilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Anime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     "Spring Boot.CoursJeeApplication.executor": "Run",
     "Spring Boot.MyAnimeMapApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "yani",
+    "git-widget-placeholder": "dorian",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
     "node.js.detected.package.eslint": "true",
