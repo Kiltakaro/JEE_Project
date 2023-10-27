@@ -1,7 +1,7 @@
 <div th:replace="~{/common/head.html}"></div>
 <body>
     <div th:replace="~{/common/header.html}"></div>
-    <div class="container mt-4">
+    <div class="container mt-4" th:if="${session.user.getType().equals('admin')}">
         <h1 class="mb-4 text-center">Enregistrer un Anime</h1>
         <div class="d-flex justify-content-center">
             <form th:action="@{/anime/save}" th:object="${anime}" method="post" style="width: 60%;">
@@ -31,5 +31,10 @@
             </form>
         </div>
     </div>
-    <div th:replace="~{/common/footer.html}"></div>
+	<div class="container mt-4" th:if="${session.user.getType().equals('user')}">
+   		<h1 style="color: red; text-align: center; font-weight: bold;">Vous n'avez pas accès à cette page</h1>
+	</div>
+
+
+	<div class="fixed-bottom" th:insert="~{/common/footer.html}"></div>
 </body>
