@@ -25,4 +25,5 @@ public class AnimeServiceImpl implements AnimeService {
     public List<Anime> findByName(String name) {
         return animeRepository.findByName(name);
     }
+
 }
