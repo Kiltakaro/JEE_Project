@@ -27,7 +27,7 @@ public class DataInitializer {
             initializeDatabaseWithDefaultUsers();
         }
     }
-    
+    	
     
 
     private void initializeDatabaseWithDefaultAnime() {

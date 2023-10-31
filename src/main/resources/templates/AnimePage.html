@@ -14,6 +14,16 @@
                 <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
             </ul>
         </div>
+		<div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+	        <div class="form-group">
+	           <button type="button" class="btn btn-success" id="modifierAnime">
+	               Modifier l'Anime
+	           </button>
+	           <button type="button" class="btn btn-danger" id="supprimerAnime">
+	               Supprimer l'Anime
+	           </button>
+	        </div>
+        </div>
     </div>
     <div class="col-md-8 rightside">
         <div class="border">Rank: </div>
@@ -47,6 +57,7 @@
                             <option value="1">(1) Crime contre l'humanité</option>
                         </select>
                     </div>
+						
                     <div class="form-group">
                         <label for="critique">Critique :</label>
                         <textarea class="form-control" id="critique" placeholder="Saisissez votre critique"></textarea>
