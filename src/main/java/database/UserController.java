@@ -48,4 +48,10 @@ public class UserController {
             return "redirect:/login?error";
         }
     }
+    
+    @GetMapping("/logout")
+    public String logoutUser() {
+        session.removeAttribute("user");
+        return "redirect:/login";
+    }
 }
