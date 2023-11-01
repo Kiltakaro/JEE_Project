@@ -1,10 +1,12 @@
 <div th:replace="~{/common/head.html}"></div>
 <body>
     <div th:replace="~{/common/header.html}"></div>
-		<div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
-	        <h1 class="mb-4 text-center">Enregistrer un Anime</h1>
+<body>
+    <div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+	        <h1 class="mb-4 text-center">Modifier un Anime</h1>
 	        <div class="d-flex justify-content-center">
-	            <form th:action="@{/anime/save}" th:object="${anime}" method="post" style="width: 60%;">
+	            <form th:object="${anime}" method="post" action="/edit-anime">
+					<input type="hidden" th:field="*{id}" />
 	                <div class="form-group">
 	                    <label for="name">Nom :</label>
 	                    <input type="text" id="name" th:field="*{name}" class="form-control form-control-lg" required>
@@ -31,10 +33,6 @@
 	            </form>
 	        </div>
 	    </div>
-	<div class="container mt-4" th:if="${session.user.getType().equals('user')}">
-   		<h1 style="color: red; text-align: center; font-weight: bold;">Vous n'avez pas accès à cette page</h1>
-	</div>
-
-
+</form>
 	<div th:insert="~{/common/footer.html}"></div>
 </body>

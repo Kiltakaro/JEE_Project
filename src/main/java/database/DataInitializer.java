@@ -48,7 +48,7 @@ public class DataInitializer {
         anime2.setStudio("A-1 Picture");
         
         Anime anime3 = new Anime();
-        anime3.setName("Full Metal Alchemist Brotherwood");
+        anime3.setName("Full Metal Alchemist");
         anime3.setDescription("Put description");
         anime3.setRating(9);
         anime3.setImageURL("https://fr.web.img3.acsta.net/pictures/19/07/29/15/56/5220959.jpg");

@@ -16,9 +16,11 @@
         </div>
 		<div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
 	        <div class="form-group">
-	           <button type="button" class="btn btn-success" id="modifierAnime">
-	               Modifier l'Anime
-	           </button>
+	           <a th:href="@{/edit-anime/{animeId}(animeId=${anime.id})}" style="text-decoration: none; color: white;">
+				   <button type="button" class="btn btn-success" id="modifierAnime">
+					   Modifier l'Anime
+					</button>
+				</a>
 	           <button type="button" class="btn btn-danger" id="supprimerAnime">
 	               Supprimer l'Anime
 	           </button>
