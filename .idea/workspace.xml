@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/recherche.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/anime-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/anime-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/head.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +154,10 @@
       <workItem from="1698350763569" duration="6498000" />
       <workItem from="1698387312863" duration="14524000" />
       <workItem from="1698414855757" duration="1492000" />
-      <workItem from="1698500486838" duration="3063000" />
+      <workItem from="1698500486838" duration="9636000" />
+      <workItem from="1698520123139" duration="2588000" />
+      <workItem from="1698911095380" duration="3691000" />
+      <workItem from="1698929955559" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />

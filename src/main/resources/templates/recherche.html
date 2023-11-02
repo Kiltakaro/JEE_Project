@@ -1,0 +1,23 @@
+<div th:replace="~{/common/head.html}"></div>
+<body>
+<div th:replace="~{/common/header.html}"></div>
+
+<h1>Résultats de la recherche</h1>
+
+<ul>
+    <li th:each="result : ${results}">
+        <span th:text="${result.name}"></span>
+    </li>
+</ul>
+<!--
+<div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/AnimePage?animeId=' + ${film.id} + '\''">
+    <img th:src="${film.imageURL}" class="tile-image"/>
+    <div class="tile-title" th:text="${film.name}"></div>
+    <div class="rating-box">
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
+    </div>
+</div>
+-->
+
+<div th:replace="~{/common/footer.html}"></div>
+</body>
