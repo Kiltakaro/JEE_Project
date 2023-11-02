@@ -15,10 +15,11 @@ import java.util.List;
 public class SearchController {
     @Autowired
     private AnimeRepository animeRepository;
+    /*
     @GetMapping("/recherche")
     public String getSearch(@RequestParam String recherche, Model model) {
         List<Anime> anime = animeRepository.findByName(recherche);
         model.addAttribute("results", anime);
         return "recherche";
-    }
+    }*/
 }

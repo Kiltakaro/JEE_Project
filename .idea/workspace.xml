@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/recherche.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AnimeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/recherche.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/recherche.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -35,22 +35,12 @@ public class AnimeController {
 
         return "redirect:/anime/form";
     }
-    @GetMapping("/anime/search")
-    public ResponseEntity<List<Anime>> searchAnime(@RequestParam String name,Model model){
-        List<Anime> animeSuggestions = animeService.findByName(name);
-        model.addAttribute("test", animeSuggestions);
-        return ResponseEntity.ok(animeSuggestions);
-    }
-    /*
-    @PostMapping("/recherche")
-    public String searchAnime(@ModelAttribute("anime") Anime anime) {
-        return "redirect:/recherche";
-    }
     @GetMapping("/recherche")
-    public String showAnimeSearch(@RequestParam String name,Model model) {
-        List<Anime> animeSearched = animeService.findByName(name);
-        model.addAttribute("results", animeSearched);
+    public String searchAnime(@RequestParam String name,Model model){
+        List<Anime> animeSuggestions = animeService.searchAnime(name);
+        model.addAttribute("results", animeSuggestions);
         return "recherche";
-    }*/
+    }
+
 
 }
