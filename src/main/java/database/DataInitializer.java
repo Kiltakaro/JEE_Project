@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
 
+import java.util.List;
+import java.util.Random;
+
 @Component
 public class DataInitializer {
 
@@ -16,19 +19,23 @@ public class DataInitializer {
     
     @Autowired
     private CharacterRepository characterRepository;
-    
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     @PostConstruct
     public void initData() {
         long animeCount = animeRepository.count();
         long userCount = userRepository.count();
-
+        long reviewCount = reviewRepository.count();
         if (animeCount == 0) {
             initializeDatabaseWithDefaultAnime();
         }
 
         if (userCount == 0) {
             initializeDatabaseWithDefaultUsers();
+        }
+        if (reviewCount == 0) {
+            initializeDatabaseWithDefaultReviews();
         }
     }
     	
@@ -47,7 +54,6 @@ public class DataInitializer {
         		+ "        		+ \"Mais un jour de l'année 845, un Titan de plus de 60 mètres de haut apparaît. Il démolit une partie du mur du district de Shiganshina et provoque une invasion de Titans.\\n\"\n"
         		+ "        		+ \"\\n\"\n"
         		+ "        		+ \"Eren verra sa mère se faire dévorer sous ses yeux sans rien pouvoir faire. Il décidera après ces événements traumatisants de s'engager dans les forces militaires de la ville avec pour but d'exterminer tous les Titans qui existent.");
-        anime1.setRating(5);
         anime1.setSeasons(4);
         anime1.setImageURL("https://fr.web.img6.acsta.net/pictures/20/12/28/10/24/5603983.jpg");
         anime1.setReleaseDate("2014-01-01");
@@ -66,7 +72,6 @@ public class DataInitializer {
         		+ "Officiellement, le 86è district n'existe pas. Pourtant, c'est grâce aux combattants qui s'y trouvent, parmi lesquels l'escadron Spearhead, dirigé par Shin et commandé par Lena, que la République a retrouvé un semblant de paix.\n"
         		+ "\n"
         		+ "");
-        anime2.setRating(9);
         anime2.setSeasons(1);
         anime2.setImageURL("https://fr.web.img6.acsta.net/pictures/21/04/06/18/19/5235708.jpg");
         anime2.setReleaseDate("2020-01-01");
@@ -78,7 +83,6 @@ public class DataInitializer {
         		+ "\n"
         		+ "Edward a tout juste 15 ans, et parcourt le pays en compagnie de son frère, Alphonse, à la recherche de la Pierre Philosophale. Il a pour but de rendre son corps à son frère, car Alphonse n'est qu'une âme rattaché à une armure par un sceau de sang. Étant plus jeunes, ils ont essayé de redonner vie à leur mère grâce à l'alchimie, mais la tentative fut un échec cuisant, et Alphonse perdit son corps.\n"
         		+ "Edward garde lui aussi des séquelles de leur tentative, puisqu'il a le bras droit et la jambe gauche en métal. Mais la quête des deux frères risque de les mener vers une vérité plus terrible qu'ils ne l'imaginaient.");
-        anime3.setRating(9);
         anime3.setSeasons(1);
         anime3.setImageURL("https://fr.web.img3.acsta.net/pictures/19/07/29/15/56/5220959.jpg");
         anime3.setReleaseDate("2009-05-04");
@@ -87,7 +91,6 @@ public class DataInitializer {
         Anime anime4 = new Anime();
         anime4.setName("One piece");
         anime4.setDescription("Il fut un temps où Gold Roger était le plus grand de tous les pirates, le \"Roi des Pirates\" était son surnom. A sa mort, son trésor d'une valeur inestimable connu sous le nom de \"One Piece\" fut caché quelque part sur \"Grand Line\". De nombreux pirates sont partis à la recherche de ce trésor mais tous sont morts avant même de l'atteindre. Monkey D. Luffy rêve de retrouver ce trésor légendaire et de devenir le nouveau \"Roi des Pirates\". Après avoir mangé un fruit du démon, il possède un pouvoir lui permettant de réaliser son rêve. Il lui faut maintenant trouver un équipage pour partir à l'aventure !");
-        anime4.setRating(8);
         anime4.setSeasons(1);
         anime4.setImageURL("https://www.nautiljon.com/images/anime/00/60/mini/one_piece_6.webp?11698616500");
         anime4.setReleaseDate("1999-06-09");
@@ -100,7 +103,6 @@ public class DataInitializer {
         		+ "Hyakkimaru est infirme : 48 parties de son corps ont été vendues à autant de démons avant sa naissance. Rafistolé par un chirurgien compatissant, adolescent, il se découvre d'étranges pouvoirs psychiques. Accompagné de Dororo, un petit voleur espiègle, il arpente le Japon à la recherche d'un endroit où vivre en paix... affrontant au passage esprits et forces obscures.\n"
         		+ "\n"
         		+ "");
-        anime5.setRating(7);
         anime5.setSeasons(1);
         anime5.setImageURL("https://www.nautiljon.com/images/anime/00/67/mini/dororo_7676.webp?11696270137");
         anime5.setReleaseDate("2019-01-07");
@@ -130,6 +132,31 @@ public class DataInitializer {
 
         userRepository.save(user1);
         userRepository.save(user2);
+    }
+    private void initializeDatabaseWithDefaultReviews() {
+        List<Anime> animes =animeRepository.findAll();
+        List<User> users= userRepository.findAll();
+        Random random = new Random();
+
+        for (Anime anime : animes) {
+            double totalRating = 0;
+            int numberOfReviews = 0;
+            for (User user : users) {
+                Review review = new Review();
+                review.setUser(user);
+                review.setAnime(anime);
+                int randomRating = random.nextInt(10) + 1;
+                review.setRating(randomRating);
+                totalRating += randomRating;
+                numberOfReviews++;
+                review.setReview("Avis aléatoire pour " + anime.getName());
+                review.setDate("2021-05-01");
+                reviewRepository.save(review);
+            }
+            double averageRating = totalRating / numberOfReviews;
+            anime.setRating(averageRating);
+            animeRepository.save(anime);
+        }
     }
 }
 
