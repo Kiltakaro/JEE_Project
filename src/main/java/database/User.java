@@ -26,6 +26,7 @@ public class User {
 	@OneToMany(mappedBy = "user")
 	private List<Review> reviews = new ArrayList<>();
 	
+	// Will encryptpassword
     public void setPassword(String password) {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
         this.password = hashedPassword;

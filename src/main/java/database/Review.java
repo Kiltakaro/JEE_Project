@@ -10,16 +10,12 @@ public class Review {
     @GeneratedValue @Id
     private Long id;
 
-    // rating (1-10)
     private int rating;
 
-    // review
     private String review;
 
-    // title
     private String title;
 
-    // date
     private String date;
 
     // One review is written by one user

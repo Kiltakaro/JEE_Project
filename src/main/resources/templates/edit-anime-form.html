@@ -6,31 +6,35 @@
 	        <h1 class="mb-4 text-center">Modifier un Anime</h1>
 	        <div class="d-flex justify-content-center">
 	            <form th:object="${anime}" method="post" action="/edit-anime">
-					<input type="hidden" th:field="*{id}" />
-	                <div class="form-group">
-	                    <label for="name">Nom :</label>
-	                    <input type="text" id="name" th:field="*{name}" class="form-control form-control-lg" required>
-	                </div>
-	                <div class="form-group">
-	                    <label for="description">Description :</label>
-	                    <textarea id="description" th:field="*{description}" class="form-control" style="height: 200px;" required></textarea>
-	                </div>
-	                <div class="form-group">
-	                    <label for="rating">Note :</label>
-	                    <input type="number" id="rating" th:field="*{rating}" class="form-control form-control-lg" required>
-	                </div>
-	                <div class="form-group">
-	                    <label for="imageURL">URL de l'image :</label>
-	                    <input type="text" id="imageURL" th:field="*{imageURL}" class="form-control form-control-lg" required>
-	                </div>
-	                <div class="form-group">
-	                    <label for="releaseDate">Date de sortie :</label>
-	                    <input type="text" id="releaseDate" th:field="*{releaseDate}" class="form-control form-control-lg" required>
-	                </div>
-	                <div class="form-group text-center">
-	                    <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Enregistrer</button>
-	                </div>
-	            </form>
+				    <input type="hidden" th:field="*{id}" />
+				    <div class="form-group">
+				        <label for="name">Nom :</label>
+				        <input type="text" id="name" th:field="*{name}" class="form-control form-control-lg" required>
+				    </div>
+				    <div class="form-group">
+				        <label for="description">Description :</label>
+				        <textarea id="description" th:field="*{description}" class="form-control" style="height: 200px;" required></textarea>
+				    </div>
+				    <div class="form-group">
+				        <label for="seasons">Nombre de saisons :</label>
+				        <input type="number" id="seasons" th:field="*{seasons}" class="form-control form-control-lg" required>
+				    </div>
+				    <div class="form-group">
+				        <label for="imageURL">URL de l'image :</label>
+				        <input type="text" id="imageURL" th:field="*{imageURL}" class="form-control form-control-lg" required>
+				    </div>
+				    <div class="form-group">
+				        <label for="studio">Studio :</label>
+				        <input type="text" id="studio" th:field="*{studio}" class="form-control form-control-lg" required>
+				    </div>
+				    <div class="form-group">
+				        <label for="releaseDate">Date de sortie :</label>
+				        <input type="text" id="releaseDate" th:field="*{releaseDate}" class="form-control form-control-lg" required>
+				    </div>
+				    <div class="form-group text-center">
+				        <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Enregistrer</button>
+				    </div>
+				</form>
 	        </div>
 	    </div>
 </form>

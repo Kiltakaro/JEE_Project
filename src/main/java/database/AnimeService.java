@@ -13,4 +13,6 @@ public interface AnimeService {
     List<Anime> searchAnime(String name);
 	void updateAnime(Anime editedAnime);
 	Anime getAnimeById(Long id);
+	void deleteAnime(Long id);
+
 }

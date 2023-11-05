@@ -36,6 +36,6 @@ public class ReviewController {
         review.setAnime(animeRepository.findById(animeId).orElse(null));
         review.setDate(String.valueOf(new java.sql.Date(System.currentTimeMillis())));
         reviewRepository.save(review);
-        return "redirect:AnimePage?animeId="+animeId;
+        return "redirect:animePage?animeId="+animeId;
     }
 }
