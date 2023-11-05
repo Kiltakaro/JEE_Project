@@ -12,8 +12,6 @@ public class Character {
     private Long id;
 
     private String name;
-
-    private String voiceActor;
     
     private String imageURL;
     
@@ -35,14 +33,6 @@ public class Character {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getVoiceActor() {
-        return voiceActor;
-    }
-
-    public void setVoiceActor(String voiceActor) {
-        this.voiceActor = voiceActor;
     }
 
     public Anime getAnime() {

@@ -39,7 +39,7 @@ public class Anime {
 
 
     // One anime can have many characters (at least 1)
-    @OneToMany(mappedBy = "anime")
+    @OneToMany(mappedBy = "anime", cascade = CascadeType.REMOVE)
     private List<Character> characters = new ArrayList<>();
 
 
