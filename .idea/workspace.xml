@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/ReviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/TagController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/AnimePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/AnimePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-11.0.20-corretto-11.0.20.1-94882acfe85c-df5cf1bb" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-1571ab7be1d6-08804627" />
       </set>
     </attachedChunks>
   </component>
@@ -154,6 +158,8 @@
       <workItem from="1698520123139" duration="2588000" />
       <workItem from="1698911095380" duration="3691000" />
       <workItem from="1698929955559" duration="706000" />
+      <workItem from="1699123485962" duration="22000" />
+      <workItem from="1699123645996" duration="4759000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
@@ -264,5 +270,15 @@
     <MESSAGE value="add of repository classes and AnimeController" />
     <MESSAGE value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
     <option name="LAST_COMMIT_MESSAGE" value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.thymeleaf.exceptions.TemplateProcessingException" package="org.thymeleaf.exceptions" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

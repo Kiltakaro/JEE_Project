@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<div th:replace="~{/common/head.html}"></div>
 <body>
+<div th:replace="~{/common/header.html}"></div>
 
+<div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/AnimePage?animeId=' + ${film.id} + '\''">
+    <img th:src="${film.imageURL}" class="tile-image"/>
+    <div class="tile-title" th:text="${film.name}"></div>
+    <div class="rating-box">
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
+    </div>
+</div>
+
+<div th:replace="~{/common/footer.html}"></div>
 </body>
-</html>
