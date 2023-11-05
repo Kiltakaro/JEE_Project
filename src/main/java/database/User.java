@@ -1,5 +1,7 @@
 package database;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,15 @@ public class User {
 
 	@OneToMany(mappedBy = "user")
 	private List<Review> reviews = new ArrayList<>();
+	
+    public void setPassword(String password) {
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        this.password = hashedPassword;
+    }
+
+    public boolean verifyPassword(String inputPassword) {
+        return BCrypt.checkpw(inputPassword, this.password);
+    }
 
 	public String getUsername() {
 		return username;
@@ -32,9 +43,6 @@ public class User {
 	}
 	public String getPassword() {
 		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	public String getType() {
 		return type;

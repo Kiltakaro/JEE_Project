@@ -13,6 +13,7 @@ import java.util.List;
 public class AnimePageController {
     @Autowired
     private AnimeRepository animeRepository;
+    
     @GetMapping("/AnimePage")
     public String getAnimePage(@RequestParam Long animeId, Model model) {
         Anime anime = animeRepository.findById(animeId).orElse(null);

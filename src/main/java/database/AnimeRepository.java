@@ -14,3 +14,5 @@ public interface AnimeRepository extends JpaRepository<Anime, Long>{
     public List<Anime> searchAnime(String name);
 
 }
+
+
