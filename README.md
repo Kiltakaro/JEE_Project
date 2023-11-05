@@ -8,7 +8,8 @@ Nous recommandons fortement l'utilisation d'Itellij.
 ## Utilisation
 
 Il est possible d'aller sur la page d'accueil sans se connecter mais les actions seront plus limitées.
-- localhost:8080/accueil  
+- localhost:8080/accueil
+  
 Nous recommendons donc la connexion en cliquant sur le bouton se connecter en haut à droite ou en aller directement sur :
 - localhost:8080/login
 
