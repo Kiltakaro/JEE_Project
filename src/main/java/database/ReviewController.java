@@ -34,12 +34,20 @@ public class ReviewController {
 
     @PostMapping("/review")
     public String addReview(@RequestParam("note") int note, @RequestParam("critique") String texte, @RequestParam("animeId") Long animeId) {
+        double rating = note;
         User user = (User) session.getAttribute("user");
+        Anime anime=animeRepository.findById(animeId).orElse(null);
+        List<Review> reviews = reviewRepository.findByAnimeId(animeId);
+        for (Review r : reviews) {
+            rating +=r.getRating();
+        }
+        rating = rating/(reviews.size()+1);
+        anime.setRating(rating);
         if (user != null) {
             Review review = new Review();
             review.setRating(note);
             review.setReview(texte);
-            review.setAnime(animeRepository.findById(animeId).orElse(null));
+            review.setAnime(anime);
             review.setDate(String.valueOf(new java.sql.Date(System.currentTimeMillis())));
             review.setUser(user);
             reviewRepository.save(review);
