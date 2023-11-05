@@ -1,0 +1,77 @@
+<div th:replace="~{/common/head.html}"></div>
+<body>
+<div th:replace="~{/common/header.html}"></div>
+<h2 class="ml-2">Sortie récente</h2>
+
+<div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/animePage?animeId=' + ${film.id} + '\''">
+    <img th:src="${film.imageURL}" class="tile-image"/>
+    <div class="tile-title" th:text="${film.name}"></div>
+    <div class="rating-box">
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
+    </div>
+</div>
+
+<h2 class="ml-2"> Les mieux notés</h2>
+
+<div th:each="film : ${topRatedAnimes}" class="tile" th:onclick="'window.location.href=\'/animePage?animeId=' + ${film.id} + '\''">
+    <img class="tile-image" th:src="${film.imageURL}" />
+    <div class="tile-title" th:text="${film.name}"></div>
+    <div class="rating-box">
+        <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
+    </div>
+</div>
+
+<!--
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/FMAB.jpg');"></div>
+    <div class="tile-title">FMAB</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/COTE.jpg');"></div>
+    <div class="tile-title">COTE</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/STEINSGATE.jpg');"></div>
+    <div class="tile-title">Steins Gate</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/GINTAMA.JPG');"></div>
+    <div class="tile-title">Gintama</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/HxH.jpg');"></div>
+    <div class="tile-title">HxH</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/KAGUYASAMA.jpg');"></div>
+    <div class="tile-title">Kaguya Sama</div>
+    <div class="rating-box">
+        <div class="rating" style="width:100%;"></div>
+    </div>
+</div>
+<div class="tile">
+    <div class="tile-image" style="background-image: url('/img/ONEPIECE.jpg');"></div>
+    <div class="tile-title">One Piece</div>
+    <div class="rating-box">
+        <div class="rating" style="width:92%;"></div>
+    </div>
+</div>
+-->
+
+<div th:replace="~{/common/footer.html}"></div>
+</body>

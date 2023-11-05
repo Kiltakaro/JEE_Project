@@ -1,0 +1,40 @@
+<div th:replace="~{/common/head.html}"></div>
+<body>
+    <div th:replace="~{/common/header.html}"></div>
+		<div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+	        <h1 class="mb-4 text-center">Enregistrer un Anime</h1>
+	        <div class="d-flex justify-content-center">
+	            <form th:action="@{/anime/save}" th:object="${anime}" method="post" style="width: 60%;">
+	                <div class="form-group">
+	                    <label for="name">Nom :</label>
+	                    <input type="text" id="name" th:field="*{name}" class="form-control form-control-lg" required>
+	                </div>
+	                <div class="form-group">
+	                    <label for="description">Description :</label>
+	                    <textarea id="description" th:field="*{description}" class="form-control" style="height: 200px;" required></textarea>
+	                </div>
+	                <div class="form-group">
+	                    <label for="rating">Note :</label>
+	                    <input type="number" id="rating" th:field="*{rating}" class="form-control form-control-lg" required>
+	                </div>
+	                <div class="form-group">
+	                    <label for="imageURL">URL de l'image :</label>
+	                    <input type="text" id="imageURL" th:field="*{imageURL}" class="form-control form-control-lg" required>
+	                </div>
+	                <div class="form-group">
+	                    <label for="releaseDate">Date de sortie :</label>
+	                    <input type="text" id="releaseDate" th:field="*{releaseDate}" class="form-control form-control-lg" required>
+	                </div>
+	                <div class="form-group text-center">
+	                    <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 5px;">Enregistrer</button>
+	                </div>
+	            </form>
+	        </div>
+	    </div>
+	<div class="container mt-4" th:if="${session.user.getType().equals('user')}">
+   		<h1 style="color: red; text-align: center; font-weight: bold;">Vous n'avez pas accès à cette page</h1>
+	</div>
+
+
+	<div th:insert="~{/common/footer.html}"></div>
+</body>
