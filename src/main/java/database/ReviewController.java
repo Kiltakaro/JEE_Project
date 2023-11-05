@@ -1,5 +1,6 @@
 package database;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,29 +14,38 @@ import java.util.List;
 
 @Controller
 public class ReviewController {
-
+    @Autowired
     private ReviewRepository reviewRepository;
+    @Autowired
     private AnimeRepository animeRepository;
+    @Autowired
+    private HttpSession session;
+
 
     @Autowired
     public ReviewController(ReviewRepository reviewRepository,AnimeRepository animeRepository) {
         this.reviewRepository = reviewRepository;
         this.animeRepository = animeRepository;
     }
-
     @GetMapping("/review")
-    public String showReview(@RequestParam Long animeId,Model model) {
+    public String showReview(@RequestParam Long animeId, Model model) {
         return "review";
     }
 
     @PostMapping("/review")
-    public String addReview(@RequestParam("note") int note, @RequestParam("critique") String texte, @RequestParam("animeId") Long animeId){
-        Review review = new Review();
-        review.setRating(note);
-        review.setReview(texte);
-        review.setAnime(animeRepository.findById(animeId).orElse(null));
-        review.setDate(String.valueOf(new java.sql.Date(System.currentTimeMillis())));
-        reviewRepository.save(review);
-        return "redirect:animePage?animeId="+animeId;
+    public String addReview(@RequestParam("note") int note, @RequestParam("critique") String texte, @RequestParam("animeId") Long animeId) {
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
+            Review review = new Review();
+            review.setRating(note);
+            review.setReview(texte);
+            review.setAnime(animeRepository.findById(animeId).orElse(null));
+            review.setDate(String.valueOf(new java.sql.Date(System.currentTimeMillis())));
+            review.setUser(user);
+            reviewRepository.save(review);
+            return "redirect:AnimePage?animeId=" + animeId;
+        } else {
+            return "redirect:/login?error";
+        }
     }
 }

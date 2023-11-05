@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.List;
 
 @Controller
 public class AnimeController {
 
     final AnimeService animeService;
+<<<<<<< HEAD
+=======
+    @Autowired
+    private AnimeRepository animeRepository;
+>>>>>>> f5e846ba9612165e4dd82272f28d827b457a2692
 
     @Autowired
     public AnimeController(AnimeService animeService) {
