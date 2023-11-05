@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface ReviewRepository extends JpaRepository<Review, Long>{
 
     List<Review> findByTitle(String lastName);
-    
+
+    List<Review> findByAnimeId(Long animeId);
 }
