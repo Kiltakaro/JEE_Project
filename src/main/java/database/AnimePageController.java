@@ -16,19 +16,23 @@ public class AnimePageController {
     
     @Autowired
     private CharacterRepository characterRepository;
-    
+
     @GetMapping("/animePage")
     public String getAnimePage(@RequestParam Long animeId, Model model) {
         Anime anime = animeRepository.findById(animeId).orElse(null);
         if (anime != null) {
             model.addAttribute("anime", anime);
-            
+
             List<Character> characters = characterRepository.findByAnimeId(animeId);
             model.addAttribute("characters", characters);
-            
+
             List<Review> reviews = anime.getReviews();
             //reviews.sort(Comparator.comparing(Review::getDate).reversed());
             model.addAttribute("reviews", reviews);
+            List<Anime> animes =animeRepository.findAll();
+            animes.sort(Comparator.comparing(Anime::getRating).reversed());
+            int rank = animes.indexOf(anime) + 1;
+            model.addAttribute("rank", rank);
         }
         return "animePage";
     }
