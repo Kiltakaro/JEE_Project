@@ -6,13 +6,13 @@ Pour expériencer le site il suffit de lancer : "MyAnimeMapApplication.java"
 
 ## Utilisation
 
-Normalement un compte admin devrait s'être crée automatiquement
-username : admin
-password : admin
+Normalement un compte admin devrait s'être crée automatiquement\
+- username : admin
+- password : admin
 
-Pareil pour le compte user
-username : user
-password : user
+Pareil pour le compte user\
+- username : user
+- password : user
 
 Sinon on peut s'enregistrer puis se connecter comme un utilisateur lambda.
 Un utilisateur peut cliquer sur les animes et voir les détails et même rajouter une critique s'il en a envie.
