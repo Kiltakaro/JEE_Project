@@ -2,8 +2,8 @@
 
 ## Lancement
 
-Pour expériencer le site il suffit de lancer : "MyAnimeMapApplication.java"
-Nous recommandons l'utilisations d'Itellij 
+Pour expériencer le site il suffit de lancer : "MyAnimeMapApplication.java".
+Nous recommandons fortement l'utilisation d'Itellij.
 
 ## Utilisation
 
