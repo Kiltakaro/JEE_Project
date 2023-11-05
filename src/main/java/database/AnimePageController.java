@@ -16,7 +16,8 @@ public class AnimePageController {
     
     @Autowired
     private CharacterRepository characterRepository;
-
+    @Autowired
+    private TagRepository tagRepository;
     @GetMapping("/animePage")
     public String getAnimePage(@RequestParam Long animeId, Model model) {
         Anime anime = animeRepository.findById(animeId).orElse(null);
@@ -33,6 +34,8 @@ public class AnimePageController {
             animes.sort(Comparator.comparing(Anime::getRating).reversed());
             int rank = animes.indexOf(anime) + 1;
             model.addAttribute("rank", rank);
+            List<Tag> tags = tagRepository.findAll();
+            model.addAttribute("tags", tags);
         }
         return "animePage";
     }

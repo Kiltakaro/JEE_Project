@@ -5,7 +5,7 @@
 <h1>Résultats de la recherche</h1>
 
 <div th:each="result : ${results}" class="col-md-12 my-4">
-    <div class="media border p-3 bg-light " th:onclick="'window.location.href=\'/AnimePage?animeId=' + ${result.id} + '\''" style="cursor: pointer;">
+    <div class="media border p-3 bg-light " th:onclick="'window.location.href=\'/animePage?animeId=' + ${result.id} + '\''" style="cursor: pointer;">
         <img th:src="${result.imageURL}" class="mr-3 img-thumbnail" alt="Image" style="max-width: 200px; max-height: 300px;">
         <div class="media-body">
             <h5 th:text="${result.name}" class="border-bottom"></h5>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class TagController {
@@ -39,6 +40,14 @@ public class TagController {
         tag.setName(name);
         tagRepository.save(tag);
         return "redirect:/categories";
+    }
+    @PostMapping("/catégorie")
+    public String addCatégorieAnime(@RequestParam("catégorie") Long tagId, @RequestParam("animeId") Long animeId) {
+        Anime anime=animeRepository.findById(animeId).orElse(null);
+        Tag tag =tagRepository.findById(tagId).orElse(null);
+        anime.getTags().add(tag);
+        animeRepository.save(anime);
+        return "redirect:animePage?animeId=" + animeId;
     }
 
 
