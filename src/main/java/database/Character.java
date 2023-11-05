@@ -11,14 +11,12 @@ public class Character {
     @Id @GeneratedValue
     private Long id;
 
-    @Column
     private String name;
 
-    @Column
     private String voiceActor;
-
-
-    // a character belongs to one anime
+    
+    private String imageURL;
+    
     @ManyToOne
     @JoinColumn(name = "anime_id")
     private Anime anime;
@@ -54,4 +52,12 @@ public class Character {
     public void setAnime(Anime anime) {
         this.anime = anime;
     }
+
+	public String getImageURL() {
+		return imageURL;
+	}
+
+	public void setImageURL(String imageURL) {
+		this.imageURL = imageURL;
+	}
 }

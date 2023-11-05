@@ -17,7 +17,6 @@ import java.util.List;
 public class AnimeController {
 
     final AnimeService animeService;
-    
 
     @Autowired
     public AnimeController(AnimeService animeService) {
