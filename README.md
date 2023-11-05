@@ -30,4 +30,4 @@ Et il peut aussi rajouter des animes dans la base de données en cliquant sur le
 
 L'administrateur peut aussi rajouter des catégories depuis la page Catégories.
 Il peut également assigner des catégories aux animes depuis la page de l'anime.
-Pour profiter du filtrage par catégories il est recommandé d'ajouter manuellement des catégories aux animes, celles çi n'étant pas assignées par défaut.
+Pour profiter du filtrage par catégories il est recommandé d'ajouter manuellement des catégories aux animes, celles-ci n'étant pas assignées par défaut.
