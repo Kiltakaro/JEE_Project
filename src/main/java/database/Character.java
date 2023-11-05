@@ -6,6 +6,7 @@ import lombok.Getter;
 
 
 @Entity
+@Getter
 public class Character {
 
     @Id @GeneratedValue
@@ -20,36 +21,36 @@ public class Character {
 
     // a character belongs to one anime
     @ManyToOne
-    @JoinColumn(name = "anime_id")
+//    @JoinColumn(name = "anime_id")
     private Anime anime;
 
-    public Long getId() {
-        return id;
-    }
+//    public Long getId() {
+//        return id;
+//    }
 
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getVoiceActor() {
-        return voiceActor;
-    }
+//    public String getVoiceActor() {
+//        return voiceActor;
+//    }
 
     public void setVoiceActor(String voiceActor) {
         this.voiceActor = voiceActor;
     }
 
-    public Anime getAnime() {
-        return anime;
-    }
+//    public Anime getAnime() {
+//        return anime;
+//    }
 
     public void setAnime(Anime anime) {
         this.anime = anime;

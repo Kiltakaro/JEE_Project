@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="811f19a6-a51c-447d-9026-93cb469ad5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AfficheTestController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Anime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/afficheTest.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,31 +54,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.CoursJeeApplication.executor": "Run",
-    "Spring Boot.MyAnimeMapApplication.executor": "Run",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dorian",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/cytech/Cours/Project/JEE_Project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CoursJeeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.MyAnimeMapApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dorian&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/cytech/Cours/Project/JEE_Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -151,6 +152,7 @@
       <workItem from="1698268805296" duration="2107000" />
       <workItem from="1698300480627" duration="67000" />
       <workItem from="1698350763569" duration="6498000" />
+      <workItem from="1698393204638" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="Database tables added (without being linked yet)">
       <option name="closed" value="true" />
@@ -232,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698245270384</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="remove joint between Review and Anime, and modification of Anime rating type: from int to double">
+      <option name="closed" value="true" />
+      <created>1698392373058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698392373058</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +270,7 @@
     <MESSAGE value="add of Tag class of db" />
     <MESSAGE value="add of repository classes and AnimeController" />
     <MESSAGE value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="add AnimeController, AnimeRepository, AnimeService, AnimeServiceImpl, anime-form.html&#10;change on User, UserController, UserRepository" />
+    <MESSAGE value="remove joint between Review and Anime, and modification of Anime rating type: from int to double" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove joint between Review and Anime, and modification of Anime rating type: from int to double" />
   </component>
 </project>

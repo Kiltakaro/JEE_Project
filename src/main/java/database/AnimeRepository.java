@@ -11,3 +11,4 @@ public interface AnimeRepository extends JpaRepository<Anime, Long>{
     List<Anime> findByName(String lastName);
 
 }
+ 
