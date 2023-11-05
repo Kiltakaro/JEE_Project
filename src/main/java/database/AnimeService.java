@@ -10,6 +10,7 @@ import java.util.List;
 public interface AnimeService {
     void save(Anime anime);
     List<Anime> findByName(String name);
+    List<Anime> searchAnime(String name);
 	void updateAnime(Anime editedAnime);
 	Anime getAnimeById(Long id);
 }

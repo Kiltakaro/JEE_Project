@@ -24,6 +24,11 @@ public class AnimeServiceImpl implements AnimeService {
     public List<Anime> findByName(String name) {
         return animeRepository.findByName(name);
     }
+  
+    @Override
+    public List<Anime> searchAnime(String name) {
+        return animeRepository.searchAnime(name);
+    }
 
     @Override
     public Anime getAnimeById(Long id) {

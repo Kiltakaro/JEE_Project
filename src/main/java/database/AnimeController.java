@@ -1,12 +1,16 @@
 package database;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class AnimeController {
@@ -33,6 +37,14 @@ public class AnimeController {
 
         return "redirect:/anime/form";
     }
+  
+    @GetMapping("/recherche")
+    public String searchAnime(@RequestParam String name,Model model){
+        List<Anime> animeSuggestions = animeService.searchAnime(name);
+        model.addAttribute("results", animeSuggestions);
+        return "recherche";
+    }
+
    
     @PostMapping("/edit-anime")
     public String updateAnime(@ModelAttribute Anime editedAnime) {

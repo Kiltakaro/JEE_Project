@@ -16,13 +16,12 @@ public class Anime {
 
     private String name;
 
-
+    @Lob
     private String description;
 
-    private int rating;
+    private double rating;
 
     private String imageURL;
-
 
     // release date
     private String releaseDate;
@@ -74,7 +73,7 @@ public class Anime {
         this.description = description;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 

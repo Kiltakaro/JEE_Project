@@ -19,6 +19,9 @@ public class AnimePageController {
         Anime anime = animeRepository.findById(animeId).orElse(null);
         if (anime != null) {
             model.addAttribute("anime", anime);
+            List<Review> reviews = anime.getReviews();
+            //reviews.sort(Comparator.comparing(Review::getDate).reversed());
+            model.addAttribute("reviews", reviews);
         }
         return "AnimePage";
     }
