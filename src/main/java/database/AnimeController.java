@@ -33,7 +33,6 @@ public class AnimeController {
 
     @PostMapping("/anime/save")
     public String addAnime(@ModelAttribute("anime") Anime anime) {
-
         System.out.println("dir:"+anime);
         animeService.save(anime);
 

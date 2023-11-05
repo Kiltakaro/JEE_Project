@@ -12,6 +12,35 @@
                     <li class="bg-light list-group-item">Saisons: <span th:text="${anime.seasons}"></span></li>
                     <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
                     <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
+                    <li class="bg-light list-group-item">Catégories: <span th:text="${anime.studio}"></span>
+                        <div th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+                            <button type="button" class="btn btn-primary" id="ajouterCatégorie">
+                                Ajouter catégorie
+                            </button>
+                            <div id="nouvelleCatégorie" style="display: none;">
+                                <form th:action="@{/catégorie}" method="post">
+                                    <div class="form-group">
+                                        <label for="catégorie">Catégorie :</label>
+                                        <select class="form-control col-md-4" id="catégorie" name="catégorie">
+                                            <option value="">Sélectionnez une catégorie</option>
+                                            <option th:each="tag : ${tags}" th:value="${tag.id}" th:text="${tag.name}"></option>
+                                        </select>
+                                    </div>
+                                    <input type="hidden" name="animeId" th:value="${anime.id}" />
+                                    <button type="submit" class="btn btn-success" id="validerCategorie">Valider</button>
+                                    <button type="button" class="btn btn-danger" id="annulerCatégorie">Annuler</button>
+                                </form>
+                            </div>
+                            <script>
+                                document.getElementById("ajouterCatégorie").addEventListener("click", function() {
+                                    document.getElementById("nouvelleCatégorie").style.display = "block";
+                                });
+                                document.getElementById("annulerCatégorie").addEventListener("click", function() {
+                                    document.getElementById("nouvelleCatégorie").style.display = "none";
+                                });
+                            </script>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="container mt-2" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
@@ -77,6 +106,7 @@
                                     <option value=1>(1) Crime contre l'humanité</option>
                                 </select>
                             </div>
+
                             <div class="form-group">
                                 <label for="critique">Critique :</label>
                                 <textarea class="form-control" id="critique" name="critique" placeholder="Saisissez votre critique"></textarea>
@@ -118,5 +148,6 @@
     document.getElementById("annulerCritique").addEventListener("click", function() {
         document.getElementById("nouvelleCritique").style.display = "none";
     });
+
 </script>
 
