@@ -2,17 +2,15 @@
 <body>
 <div th:replace="~{/common/header.html}"></div>
 
-<div class="category-filters">
-    <label for="category-filter">Filtrer par catégorie :</label>
-    <select id="category-filter">
-        <option value="all">Toutes les catégories</option>
-        <option value="action">Action</option>
-        <option value="comedy">Comédie</option>
-        <option value="drama">Drame</option>
-    </select>
-    <a class="btn btn-primary" href="/addTag">Ajouter une catégorie</a>
-</div>
-
+<div class="container mt-3">
+    <div class="category-filters">
+        <label for="category-filter">Filtrer par catégorie :</label>
+        <select id="category-filter" class="form-control">
+            <option value="all">Toutes les catégories</option>
+            <option th:each="tag : ${tags}" th:value="${tag.id}" th:text="${tag.name}"></option>
+        </select>
+        <a class="btn btn-primary mt-2" href="/addTag">Ajouter une catégorie</a>
+    </div>
 
 <div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/animePage?animeId=' + ${film.id} + '\''">
     <img th:src="${film.imageURL}" class="tile-image"/>
@@ -21,6 +19,18 @@
         <div class="rating" th:style="'width: ' + ${film.rating} * 10 + '%;'"></div>
     </div>
 </div>
-
+</div>
 <div th:replace="~{/common/footer.html}"></div>
 </body>
+
+<script>
+    var selectElement = document.getElementById("category-filter");
+    selectElement.addEventListener("change", function() {
+        var selectedValue = selectElement.value;
+        if (selectedValue !== "all") {
+            window.location.href = "/categories/" + selectedValue;
+        } else {
+            window.location.href = "/categories/";
+        }
+    });
+</script>

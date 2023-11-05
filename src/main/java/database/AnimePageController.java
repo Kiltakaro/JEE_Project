@@ -21,7 +21,7 @@ public class AnimePageController {
     @GetMapping("/animePage")
     public String getAnimePage(@RequestParam Long animeId, Model model) {
         Anime anime = animeRepository.findById(animeId).orElse(null);
-        if (anime != null) {
+        if (animeId != null) {
             model.addAttribute("anime", anime);
 
             List<Character> characters = characterRepository.findByAnimeId(animeId);
