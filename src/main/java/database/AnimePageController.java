@@ -14,7 +14,7 @@ public class AnimePageController {
     @Autowired
     private AnimeRepository animeRepository;
     
-    @GetMapping("/AnimePage")
+    @GetMapping("/animePage")
     public String getAnimePage(@RequestParam Long animeId, Model model) {
         Anime anime = animeRepository.findById(animeId).orElse(null);
         if (anime != null) {
@@ -23,6 +23,6 @@ public class AnimePageController {
             //reviews.sort(Comparator.comparing(Review::getDate).reversed());
             model.addAttribute("reviews", reviews);
         }
-        return "AnimePage";
+        return "animePage";
     }
 }
