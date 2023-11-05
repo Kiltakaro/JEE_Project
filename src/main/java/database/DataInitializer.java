@@ -5,8 +5,10 @@ import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 @Component
 public class DataInitializer {
@@ -21,21 +23,26 @@ public class DataInitializer {
     private CharacterRepository characterRepository;
     @Autowired
     private ReviewRepository reviewRepository;
+    @Autowired
+    private TagRepository tagRepository;
 
     @PostConstruct
     public void initData() {
         long animeCount = animeRepository.count();
         long userCount = userRepository.count();
         long reviewCount = reviewRepository.count();
+        long tagCount = tagRepository.count();
         if (animeCount == 0) {
             initializeDatabaseWithDefaultAnime();
         }
-
         if (userCount == 0) {
             initializeDatabaseWithDefaultUsers();
         }
         if (reviewCount == 0) {
             initializeDatabaseWithDefaultReviews();
+        }
+        if (tagCount == 0) {
+            initializeDatabaseWithDefaultTags();
         }
     }
     	
@@ -58,7 +65,6 @@ public class DataInitializer {
         anime1.setImageURL("https://fr.web.img6.acsta.net/pictures/20/12/28/10/24/5603983.jpg");
         anime1.setReleaseDate("2014-01-01");
         anime1.setStudio("MAPPA");
-        
         Character charSNK1 = new Character();
         charSNK1.setName("Eren");
         charSNK1.setImageURL("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyr5G2swRuHq32MPPUF4fXSGJF4OFGqjBDw&usqp=CAU");        
@@ -241,6 +247,54 @@ public class DataInitializer {
             anime.setRating(averageRating);
             animeRepository.save(anime);
         }
+    }
+    private void initializeDatabaseWithDefaultTags() {
+        Tag tag1 = new Tag();
+        tag1.setName("Action");
+        Tag tag2 = new Tag();
+        tag2.setName("Aventure");
+        Tag tag3 = new Tag();
+        tag3.setName("Comédie");
+        Tag tag4 = new Tag();
+        tag4.setName("Drame");
+        Tag tag5 = new Tag();
+        tag5.setName("Fantastique");
+        Tag tag6 = new Tag();
+        tag6.setName("Horreur");
+        Tag tag7 = new Tag();
+        tag7.setName("Mecha");
+        Tag tag8 = new Tag();
+        tag8.setName("Mystère");
+        Tag tag9 = new Tag();
+        tag9.setName("Psychologique");
+        Tag tag10 = new Tag();
+        tag10.setName("Romance");
+        Tag tag11 = new Tag();
+        tag11.setName("Science-fiction");
+        Tag tag12 = new Tag();
+        tag12.setName("Shônen");
+        Tag tag13 = new Tag();
+        tag13.setName("Sport");
+        Tag tag14 = new Tag();
+        tag14.setName("Tranche de vie");
+        Tag tag15 = new Tag();
+        tag15.setName("Seinen");
+
+        tagRepository.save(tag1);
+        tagRepository.save(tag2);
+        tagRepository.save(tag3);
+        tagRepository.save(tag4);
+        tagRepository.save(tag5);
+        tagRepository.save(tag6);
+        tagRepository.save(tag7);
+        tagRepository.save(tag8);
+        tagRepository.save(tag9);
+        tagRepository.save(tag10);
+        tagRepository.save(tag11);
+        tagRepository.save(tag12);
+        tagRepository.save(tag13);
+        tagRepository.save(tag14);
+        tagRepository.save(tag15);
     }
 }
 
