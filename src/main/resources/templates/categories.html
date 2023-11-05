@@ -2,7 +2,19 @@
 <body>
 <div th:replace="~{/common/header.html}"></div>
 
-<div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/AnimePage?animeId=' + ${film.id} + '\''">
+<div class="category-filters">
+    <label for="category-filter">Filtrer par catégorie :</label>
+    <select id="category-filter">
+        <option value="all">Toutes les catégories</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comédie</option>
+        <option value="drama">Drame</option>
+    </select>
+    <a class="btn btn-primary" href="/addTag">Ajouter une catégorie</a>
+</div>
+
+
+<div th:each="film : ${recentAnimes}" class="tile" th:onclick="'window.location.href=\'/animePage?animeId=' + ${film.id} + '\''">
     <img th:src="${film.imageURL}" class="tile-image"/>
     <div class="tile-title" th:text="${film.name}"></div>
     <div class="rating-box">
