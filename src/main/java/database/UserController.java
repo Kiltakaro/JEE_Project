@@ -16,8 +16,6 @@ public class UserController {
     @Autowired
     private HttpSession session;
 
-
-
     @GetMapping("/register")
     public String showRegistrationForm() {
         return "register";
