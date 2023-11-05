@@ -16,11 +16,9 @@ import java.util.List;
 public class AnimeController {
 
     final AnimeService animeService;
-<<<<<<< HEAD
-=======
+
     @Autowired
     private AnimeRepository animeRepository;
->>>>>>> f5e846ba9612165e4dd82272f28d827b457a2692
 
     @Autowired
     public AnimeController(AnimeService animeService) {
