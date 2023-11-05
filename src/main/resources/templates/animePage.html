@@ -12,10 +12,13 @@
                     <li class="bg-light list-group-item">Saisons: <span th:text="${anime.seasons}"></span></li>
                     <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
                     <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
-                    <li class="bg-light list-group-item">Catégories:
-                        <span th:each="tag : ${anime.tags}" th:text="${tag.name}"></span>
+                    <li class="bg-light list-group-item">Catégories: <br>
+                        <span th:each="tag : ${anime.tags}">
+                            <span th:text="${tag.name}"></span><br>
+                            </span>
                     </li>
-                    <div th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+
+                    <div class="text-center" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
                             <button type="button" class="btn btn-primary" id="ajouterCatégorie">
                                 Ajouter catégorie
                             </button>
