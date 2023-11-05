@@ -1,6 +1,10 @@
 # JEE_Project
 
+## Lancement
+
 Pour expériencer le site il suffit de lancer : "MyAnimeMapApplication.java"
+
+## Utilisation
 
 Normalement un compte admin devrait s'être crée automatiquement
 username : admin
