@@ -65,7 +65,6 @@
                             <textarea class="form-control" id="critique" name="critique" placeholder="Saisissez votre critique"></textarea>
                         </div>
                         <input type="hidden" name="animeId" th:value="${anime.id}"/>
-                        <input type="hidden" name="userId" th:value="${session.userId}">
                         <button type="submit" class="btn btn-success" id="envoyerCritique">
                             Envoyer
                         </button>
