@@ -197,9 +197,23 @@ public class DataInitializer {
         user2.setEmail("user@example.com");
         user2.setPassword("user");
         user2.setType("user");
+        
+        User user3 = new User();
+        user3.setUsername("Ricado");
+        user3.setEmail("ricardo@example.com");
+        user3.setPassword("ricardo");
+        user3.setType("user");
+        
+        User user4 = new User();
+        user4.setUsername("YoungGuy");
+        user4.setEmail("youngguy@example.com");
+        user4.setPassword("youngguy");
+        user4.setType("user");
 
         userRepository.save(user1);
         userRepository.save(user2);
+        userRepository.save(user3);
+        userRepository.save(user4);
     }
     private void initializeDatabaseWithDefaultReviews() {
         List<Anime> animes =animeRepository.findAll();
@@ -210,16 +224,18 @@ public class DataInitializer {
             double totalRating = 0;
             int numberOfReviews = 0;
             for (User user : users) {
-                Review review = new Review();
-                review.setUser(user);
-                review.setAnime(anime);
-                int randomRating = random.nextInt(10) + 1;
-                review.setRating(randomRating);
-                totalRating += randomRating;
-                numberOfReviews++;
-                review.setReview("Avis aléatoire pour " + anime.getName());
-                review.setDate("2021-05-01");
-                reviewRepository.save(review);
+            	if (!(user.getType().equals("admin"))) {
+	                Review review = new Review();
+	                review.setUser(user);
+	                review.setAnime(anime);
+	                int randomRating = random.nextInt(10) + 1;
+	                review.setRating(randomRating);
+	                totalRating += randomRating;
+	                numberOfReviews++;
+	                review.setReview("Avis aléatoire pour " + anime.getName());
+	                review.setDate("2021-05-01");
+	                reviewRepository.save(review);
+            	}
             }
             double averageRating = totalRating / numberOfReviews;
             anime.setRating(averageRating);

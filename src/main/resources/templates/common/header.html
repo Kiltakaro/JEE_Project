@@ -15,6 +15,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/categories">Catégories</a>
                 </li>
+                <li class="nav-item active">
+					<div th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}" >
+						<a class="nav-link" href="/anime/form" style="color:red">Ajouter un anime</a>
+					</div>
+				</li>
             </ul>
         </div>
         <form class="form-inline" action="/recherche">
