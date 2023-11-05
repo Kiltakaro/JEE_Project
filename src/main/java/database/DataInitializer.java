@@ -13,6 +13,10 @@ public class DataInitializer {
 
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private CharacterRepository characterRepository;
+    
 
     @PostConstruct
     public void initData() {
@@ -48,6 +52,10 @@ public class DataInitializer {
         anime1.setImageURL("https://fr.web.img6.acsta.net/pictures/20/12/28/10/24/5603983.jpg");
         anime1.setReleaseDate("2014-01-01");
         anime1.setStudio("MAPPA");
+        
+        Character charSNK1 = new Character();
+        
+        
         
         Anime anime2 = new Anime();
         anime2.setName("86 - Eighty-six");

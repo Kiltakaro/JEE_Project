@@ -43,7 +43,7 @@ public class ReviewController {
             review.setDate(String.valueOf(new java.sql.Date(System.currentTimeMillis())));
             review.setUser(user);
             reviewRepository.save(review);
-            return "redirect:AnimePage?animeId=" + animeId;
+            return "redirect:animePage?animeId=" + animeId;
         } else {
             return "redirect:/login?error";
         }

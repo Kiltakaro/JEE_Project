@@ -35,12 +35,16 @@
         <div class="border">Rank: </div>
         <div class="border">Synopsis: <span th:text="${anime.description}"></span></div>
         <div class="border">Personnages:
-            <div>
-                <!--
-                <span th:each="character : ${anime.characters}" th:text="${character.name}"></span>
-                -->
-            </div>
-        </div>
+		    <div>
+		        <ul>
+		            <li th:each="character : ${characters}">
+		                <span th:text="${character.name}"></span> - <span th:text="${character.voiceActor}"></span>
+		                <span th:text="${character.imageURL}"></span> 
+		            </li>
+		        </ul>
+		    </div>
+		</div>
+		
         <div class="border">
             <h2 class="ml-2 mt-2">Critiques:</h2>
             <div class="container mt-4">
