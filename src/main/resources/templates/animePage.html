@@ -3,86 +3,93 @@
 <div th:replace="~{/common/header.html}"></div>
 <div class="container bg-light">
     <h1 class="border-bottom pb-3" th:text="${anime.name}"></h1>
-<div class="row">
-    <div class="col-md-3 leftside">
-        <div class="tile">
-            <img th:src="${anime.imageURL}" class="tile-image"/>
-            <ul class="list-group list-group-flush">
-                <li class="bg-light list-group-item">Titre: <span th:text="${anime.name}"></span></li>
-                <li class="bg-light list-group-item">Saisons: <span th:text="${anime.seasons}"></span></li>
-                <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
-                <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
-            </ul>
-        </div>
-		<div class="container mt-2" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
-		    <div class="form-group ml-2">
-		        <a th:href="@{/edit-anime/{animeId}(animeId=${anime.id})}" style="text-decoration: none; color: white;" class="ml-3">
-		            <button type="button" class="btn btn-success" id="modifierAnime">
-		                Modifier l'Anime
-		            </button>
-		        </a>
-		    </div>
-			    <div class="form-group ml-3 mt-2" style="margin-left: -2rem;">
-					<a th:href="@{/delete-anime/{animeId}(animeId=${anime.id})}" onclick="return confirm('Are you sure you want to delete this anime?')">
-    					<button type="button" class="btn btn-danger" id="supprimerAnime">
-						    Supprimer l'Anime
-						</button>
-					</a>
-			    </div>
-			</div>
-    	</div>
-    <div class="col-md-8 rightside">
-        <div class="border">Rank: </div>
-        <div class="border">Synopsis: <span th:text="${anime.description}"></span></div>
-        <div class="border">Personnages:
-		    <div>
-		        <ul>
-		            <li th:each="character : ${characters}">
-		                <span th:text="${character.name}"></span> - <span th:text="${character.voiceActor}"></span>
-		                <span th:text="${character.imageURL}"></span> 
-		            </li>
-		        </ul>
-		    </div>
-		</div>
-		
-        <div class="border">
-            <h2 class="ml-2 mt-2">Critiques:</h2>
-            <div class="container mt-4">
-                <button type="button" class="btn btn-primary" id="ajouterCritique">
-                    Ajouter une critique
-                </button>
-                <div id="nouvelleCritique" style="display: none;">
-                    <form th:action="@{/review}" method="post">
-                        <div class="form-group">
-                            <label for="note">Note :</label>
-                            <select class="form-control col-md-4" id="note" name="note">
-                                <option value=10>(10) Masterclass</option>
-                                <option value=9>(9) Excellent</option>
-                                <option value=8>(8) Très bien</option>
-                                <option value=7>(7) Bien</option>
-                                <option value=6>(6) Bon</option>
-          	                      <option value=5>(5) Moyen</option>
-                                <option value=4>(4) Mauvais</option>
-                                <option value=3>(3) Très mauvais</option>
-                                <option value=2>(2) Horrible</option>
-                                <option value=1>(1) Crime contre l'humanité</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="critique">Critique :</label>
-                            <textarea class="form-control" id="critique" name="critique" placeholder="Saisissez votre critique"></textarea>
-                        </div>
-                        <input type="hidden" name="animeId" th:value="${anime.id}"/>
-                        <button type="submit" class="btn btn-success" id="envoyerCritique">
-                            Envoyer
+    <div class="row">
+        <div class="col-md-3 leftside">
+            <div class="tile">
+                <img th:src="${anime.imageURL}" class="tile-image"/>
+                <ul class="list-group list-group-flush">
+                    <li class="bg-light list-group-item">Titre: <span th:text="${anime.name}"></span></li>
+                    <li class="bg-light list-group-item">Saisons: <span th:text="${anime.seasons}"></span></li>
+                    <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
+                    <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
+                </ul>
+            </div>
+            <div class="container mt-2" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+                <div class="form-group ml-2">
+                    <a th:href="@{/edit-anime/{animeId}(animeId=${anime.id})}" style="text-decoration: none; color: white;" class="ml-3">
+                        <button type="button" class="btn btn-success" id="modifierAnime">
+                            Modifier l'Anime
                         </button>
-                        <button type="button" class="btn btn-danger" id="annulerCritique">
-                            Annuler
+                    </a>
+                </div>
+                <div class="form-group ml-3 mt-2" style="margin-left: -2rem;">
+                    <a th:href="@{/delete-anime/{animeId}(animeId=${anime.id})}" onclick="return confirm('Are you sure you want to delete this anime?')">
+                        <button type="button" class="btn btn-danger" id="supprimerAnime">
+                            Supprimer l'Anime
                         </button>
-                    </form>
+                    </a>
                 </div>
             </div>
-
+        </div>
+        <div class="col-md-8 rightside">
+            <div class="border p-3 mb-3">
+                <strong>Note:</strong> <span th:text="${anime.rating}"></span>
+                <br>
+                <strong>Rank:</strong> #<span th:text="${rank}"></span>
+            </div>
+            <div class="border p-3 mb-3">
+                <h5 class="mb-3">Synopsis:</h5>
+                <p th:text="${anime.description}"></p>
+            </div>
+            <div class="border p-3">
+                <h5 class="mb-3">Personnages:</h5>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item" th:each="character : ${characters}">
+                            <span th:text="${character.name}"></span> - <span th:text="${character.voiceActor}"></span>
+                            <img src="#" alt="Character Image" th:src="${character.imageURL}" class="img-thumbnail">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border">
+                <h2 class="ml-2 mt-2">Critiques:</h2>
+                <div class="container mt-4">
+                    <button type="button" class="btn btn-primary" id="ajouterCritique">
+                        Ajouter une critique
+                    </button>
+                    <div id="nouvelleCritique" style="display: none;">
+                        <form th:action="@{/review}" method="post">
+                            <div class="form-group">
+                                <label for="note">Note :</label>
+                                <select class="form-control col-md-4" id="note" name="note">
+                                    <option value=10>(10) Masterclass</option>
+                                    <option value=9>(9) Excellent</option>
+                                    <option value=8>(8) Très bien</option>
+                                    <option value=7>(7) Bien</option>
+                                    <option value=6>(6) Bon</option>
+                                    <option value=5>(5) Moyen</option>
+                                    <option value=4>(4) Mauvais</option>
+                                    <option value=3>(3) Très mauvais</option>
+                                    <option value=2>(2) Horrible</option>
+                                    <option value=1>(1) Crime contre l'humanité</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="critique">Critique :</label>
+                                <textarea class="form-control" id="critique" name="critique" placeholder="Saisissez votre critique"></textarea>
+                            </div>
+                            <input type="hidden" name="animeId" th:value="${anime.id}"/>
+                            <button type="submit" class="btn btn-success" id="envoyerCritique">
+                                Envoyer
+                            </button>
+                            <button type="button" class="btn btn-danger" id="annulerCritique">
+                                Annuler
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div>
                 <div th:each="review : ${reviews}">
                     <div class="card mt-4">
@@ -98,7 +105,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <div th:replace="~{/common/footer.html}"></div>
