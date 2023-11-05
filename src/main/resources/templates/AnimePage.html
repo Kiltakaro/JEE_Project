@@ -9,24 +9,28 @@
             <img th:src="${anime.imageURL}" class="tile-image"/>
             <ul class="list-group list-group-flush">
                 <li class="bg-light list-group-item">Titre: <span th:text="${anime.name}"></span></li>
-                <li class="bg-light list-group-item">Saisons:</li>
+                <li class="bg-light list-group-item">Saisons: <span th:text="${anime.seasons}"></span></li>
                 <li class="bg-light list-group-item">Date de sortie: <span th:text="${anime.releaseDate}"></span></li>
                 <li class="bg-light list-group-item">Studio: <span th:text="${anime.studio}"></span></li>
             </ul>
         </div>
-		<div class="container mt-4" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
-	        <div class="form-group">
-	           <a th:href="@{/edit-anime/{animeId}(animeId=${anime.id})}" style="text-decoration: none; color: white;">
-				   <button type="button" class="btn btn-success" id="modifierAnime">
-					   Modifier l'Anime
-					</button>
-				</a>
-	           <button type="button" class="btn btn-danger" id="supprimerAnime">
-	               Supprimer l'Anime
-	           </button>
-	        </div>
-        </div>
-    </div>
+		<div class="container mt-2" th:if="${session.user != null && session.user.type != null && session.user.getType().equals('admin')}">
+		    <div class="form-group ml-2">
+		        <a th:href="@{/edit-anime/{animeId}(animeId=${anime.id})}" style="text-decoration: none; color: white;" class="ml-3">
+		            <button type="button" class="btn btn-success" id="modifierAnime">
+		                Modifier l'Anime
+		            </button>
+		        </a>
+		    </div>
+			    <div class="form-group ml-3 mt-2" style="margin-left: -2rem;">
+					<a th:href="@{/delete-anime/{animeId}(animeId=${anime.id})}" onclick="return confirm('Are you sure you want to delete this anime?')">
+    					<button type="button" class="btn btn-danger" id="supprimerAnime">
+						    Supprimer l'Anime
+						</button>
+					</a>
+			    </div>
+			</div>
+    	</div>
     <div class="col-md-8 rightside">
         <div class="border">Rank: </div>
         <div class="border">Synopsis: <span th:text="${anime.description}"></span></div>
@@ -53,7 +57,7 @@
                                 <option value=8>(8) Très bien</option>
                                 <option value=7>(7) Bien</option>
                                 <option value=6>(6) Bon</option>
-                                <option value=5>(5) Moyen</option>
+          	                      <option value=5>(5) Moyen</option>
                                 <option value=4>(4) Mauvais</option>
                                 <option value=3>(3) Très mauvais</option>
                                 <option value=2>(2) Horrible</option>
@@ -103,3 +107,4 @@
         document.getElementById("nouvelleCritique").style.display = "none";
     });
 </script>
+

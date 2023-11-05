@@ -27,7 +27,7 @@ public class UserController {
     public String registerUser(@RequestParam String username, @RequestParam String email, @RequestParam String password) {
         User user = new User();
         user.setUsername(username);
-        user.setPassword(password); // The `setPassword` method will hash the password
+        user.setPassword(password); // setPassword also hash password
         user.setEmail(email);
         user.setType("user");
         userRepository.save(user);
@@ -42,11 +42,10 @@ public class UserController {
     @PostMapping("/login")
     public String loginUser(@RequestParam String username, @RequestParam String password) {
         User user = userRepository.findByUsername(username);
-
         if (user != null && user.verifyPassword(password)) {
-            // Store a flag in the session to identify the user as logged in
+            // !!! Store a flag in the session to identify the user as logged in !!!
             session.setAttribute("user", user);
-            return "redirect:/Accueil";
+            return "redirect:/accueil";
         } else {
             return "redirect:/login?error";
         }

@@ -15,7 +15,7 @@ import java.util.List;
 public class AccueilController {
     @Autowired
     private AnimeRepository animeRepository;
-    @GetMapping("/Accueil")
+    @GetMapping("/accueil")
     public String getRecentAnime(Model model) {
         int n = 7;
         List<Anime> films = animeRepository.findAll();
@@ -27,7 +27,7 @@ public class AccueilController {
         model.addAttribute("recentAnimes", recentAnimes);
         model.addAttribute("topRatedAnimes", topRatedAnimes);
 
-        return "Accueil";
+        return "accueil";
     }
 
 

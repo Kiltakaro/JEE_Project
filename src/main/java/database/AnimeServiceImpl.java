@@ -3,6 +3,8 @@ package database;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.transaction.Transactional;
+
 import java.util.List;
 
 @Service
@@ -40,12 +42,22 @@ public class AnimeServiceImpl implements AnimeService {
         Anime existingAnime = animeRepository.findById(editedAnime.getId()).orElse(null);
 
         if (existingAnime != null) {
-            // Update the properties of the existing anime with the values from editedAnime
             existingAnime.setName(editedAnime.getName());
             existingAnime.setDescription(editedAnime.getDescription());
-            // Update other properties as needed
+            existingAnime.setSeasons(editedAnime.getSeasons());
+            existingAnime.setImageURL(editedAnime.getImageURL());
+            existingAnime.setStudio(editedAnime.getStudio());
+            existingAnime.setReleaseDate(editedAnime.getReleaseDate());
 
-            animeRepository.save(existingAnime); // Save the updated anime record
+            animeRepository.save(existingAnime);
         }
     }
+    
+    
+    @Override
+    public void deleteAnime(Long id) {
+        animeRepository.deleteById(id);
+    }
+
+    
 }

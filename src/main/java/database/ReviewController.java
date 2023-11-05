@@ -35,7 +35,6 @@ public class ReviewController {
     @PostMapping("/review")
     public String addReview(@RequestParam("note") int note, @RequestParam("critique") String texte, @RequestParam("animeId") Long animeId) {
         User user = (User) session.getAttribute("user");
-
         if (user != null) {
             Review review = new Review();
             review.setRating(note);
@@ -49,5 +48,4 @@ public class ReviewController {
             return "redirect:/login?error";
         }
     }
-
 }

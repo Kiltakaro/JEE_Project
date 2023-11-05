@@ -20,6 +20,8 @@ public class Anime {
     private String description;
 
     private double rating;
+    
+    private int seasons;
 
     private String imageURL;
 
@@ -31,8 +33,9 @@ public class Anime {
 
 
     // One anime can have many reviews
-    @OneToMany(mappedBy = "anime")
+    @OneToMany(mappedBy = "anime", cascade = CascadeType.REMOVE)
     private List<Review> reviews = new ArrayList<>();
+
 
 
     // One anime can have many characters (at least 1)
@@ -128,4 +131,12 @@ public class Anime {
     public void setTags(Set<Tag> tags) {
         this.tags = tags;
     }
+
+	public int getSeasons() {
+		return seasons;
+	}
+
+	public void setSeasons(int seasons) {
+		this.seasons = seasons;
+	}
 }

@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
@@ -47,7 +50,7 @@ public class AnimeController {
     @PostMapping("/edit-anime")
     public String updateAnime(@ModelAttribute Anime editedAnime) {
         animeService.updateAnime(editedAnime);
-        return "redirect:/AnimePage?animeId=" + editedAnime.getId();
+        return "redirect:/animePage?animeId=" + editedAnime.getId();
     }
     
     @GetMapping("/edit-anime/{animeId}")
@@ -55,12 +58,15 @@ public class AnimeController {
         Anime anime = animeService.getAnimeById(animeId);
         if (anime != null) {
             model.addAttribute("anime", anime);
-            return "edit-anime-form"; // Return the edit form template
+            return "edit-anime-form"; 
         } else {
-            // Handle the case where the anime with the given ID is not found
-            return "redirect:/error"; // You can create an error page
+            return "redirect:/error";
         }
     }
-
-
+    
+    @GetMapping("/delete-anime/{animeId}")
+    public String deleteAnime(@PathVariable Long animeId) {
+        animeService.deleteAnime(animeId);
+        return "redirect:/accueil"; 
+    }
 }
