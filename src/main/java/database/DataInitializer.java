@@ -60,7 +60,14 @@ public class DataInitializer {
         anime1.setStudio("MAPPA");
         
         Character charSNK1 = new Character();
-        
+        charSNK1.setName("Eren");
+        charSNK1.setImageURL("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyr5G2swRuHq32MPPUF4fXSGJF4OFGqjBDw&usqp=CAU");        
+        charSNK1.setAnime(anime1);
+
+        Character charSNK2 = new Character();
+        charSNK2.setName("Mikasa");
+        charSNK2.setImageURL("https://i.pinimg.com/1200x/88/72/5d/88725dc10803e09af4bb9ce91d4c5f24.jpg");  
+        charSNK2.setAnime(anime1);
         
         
         Anime anime2 = new Anime();
@@ -77,6 +84,16 @@ public class DataInitializer {
         anime2.setReleaseDate("2020-01-01");
         anime2.setStudio("A-1 Picture");
         
+        Character char861 = new Character();
+        char861.setName("Handler-1");
+        char861.setImageURL("https://upload.wikimedia.org/wikipedia/en/f/fb/86_BD_vol._1.jpg");  
+        char861.setAnime(anime2);
+
+        Character char862 = new Character();
+        char862.setName("Shinei Nouzen");
+        char862.setImageURL("https://static.zerochan.net/Shinei.Nouzen.full.3290091.jpg");  
+        char862.setAnime(anime2);
+        
         Anime anime3 = new Anime();
         anime3.setName("Full Metal Alchemist");
         anime3.setDescription("À Amestris, un immense pays, l'armée tient une place très importante puisque son dirigeant, King Bradley, est également le président du pays. Cette armée est soutenue par des alchimistes, les Alchimistes d'État dont le plus jeune, Edward Elric, a pour spécialité le métal. On le surnomme le Fullmetal Alchemist.\n"
@@ -88,6 +105,16 @@ public class DataInitializer {
         anime3.setReleaseDate("2009-05-04");
         anime3.setStudio("Bones");
         
+        Character charFMAB1 = new Character();
+        charFMAB1.setName("Edward Elric");
+        charFMAB1.setImageURL("https://i.pinimg.com/736x/a1/29/61/a12961c9d22d7f8a0363f7d99ceccc52.jpg");  
+        charFMAB1.setAnime(anime3);
+
+        Character charFMAB2 = new Character();
+        charFMAB2.setName("Alphonse Elric");
+        charFMAB2.setImageURL("https://cloudfront.first4figures.com/media/wysiwyg/Anime/Hiromu_Arakawa/FMA_Brotherhood/FMAB_Al_1_1279x720px.png");  
+        charFMAB2.setAnime(anime3);
+        
         Anime anime4 = new Anime();
         anime4.setName("One piece");
         anime4.setDescription("Il fut un temps où Gold Roger était le plus grand de tous les pirates, le \"Roi des Pirates\" était son surnom. A sa mort, son trésor d'une valeur inestimable connu sous le nom de \"One Piece\" fut caché quelque part sur \"Grand Line\". De nombreux pirates sont partis à la recherche de ce trésor mais tous sont morts avant même de l'atteindre. Monkey D. Luffy rêve de retrouver ce trésor légendaire et de devenir le nouveau \"Roi des Pirates\". Après avoir mangé un fruit du démon, il possède un pouvoir lui permettant de réaliser son rêve. Il lui faut maintenant trouver un équipage pour partir à l'aventure !");
@@ -95,6 +122,21 @@ public class DataInitializer {
         anime4.setImageURL("https://www.nautiljon.com/images/anime/00/60/mini/one_piece_6.webp?11698616500");
         anime4.setReleaseDate("1999-06-09");
         anime4.setStudio("TOEI");
+        
+        Character charOP1 = new Character();
+        charOP1.setName("Luffy");
+        charOP1.setImageURL("https://www.dvdtalk.com/reviews/images/reviews/275/1324586843_2.png");  
+        charOP1.setAnime(anime4);
+
+        Character charOP2 = new Character();
+        charOP2.setName("Nami");
+        charOP2.setImageURL("https://www.nautiljon.com/images/perso/00/82/nami_28.webp");
+        charOP2.setAnime(anime4);
+
+        Character charOP3 = new Character();
+        charOP3.setName("Zoro");
+        charOP3.setImageURL("https://i.ytimg.com/vi/IQFHCuH-I7c/hqdefault.jpg");  
+        charOP3.setAnime(anime4);
         
         Anime anime5 = new Anime();
         anime5.setName("Dororo");
@@ -108,11 +150,37 @@ public class DataInitializer {
         anime5.setReleaseDate("2019-01-07");
         anime5.setStudio("MAPPA");
         
+        Character charDO1 = new Character();
+        charDO1.setName("Dororo");
+        charDO1.setImageURL("https://www.nautiljon.com/images/perso/00/75/dororo_17957.webp");  
+        charDO1.setAnime(anime5);
+
+        Character charDO2 = new Character();
+        charDO2.setName("Hyakkimaru");
+        charDO2.setImageURL("https://www.nautiljon.com/images/perso/00/65/hyakkimaru_17956.webp");  
+        charDO2.setAnime(anime5);
+
+
         animeRepository.save(anime1);
+        characterRepository.save(charSNK1);
+        characterRepository.save(charSNK2);
+
         animeRepository.save(anime2);
+        characterRepository.save(char861);
+        characterRepository.save(char862);
+
         animeRepository.save(anime3);
+        characterRepository.save(charFMAB1);
+        characterRepository.save(charFMAB2);
+
         animeRepository.save(anime4);
+        characterRepository.save(charOP1);
+        characterRepository.save(charOP2);
+        characterRepository.save(charOP3);
+
         animeRepository.save(anime5);
+        characterRepository.save(charDO1);
+        characterRepository.save(charDO2);
 
     }
  

@@ -41,17 +41,19 @@
                 <h5 class="mb-3">Synopsis:</h5>
                 <p th:text="${anime.description}"></p>
             </div>
-            <div class="border p-3">
-                <h5 class="mb-3">Personnages:</h5>
-                <div>
-                    <ul class="list-group">
-                        <li class="list-group-item" th:each="character : ${characters}">
-                            <span th:text="${character.name}"></span> - <span th:text="${character.voiceActor}"></span>
-                            <img src="#" alt="Character Image" th:src="${character.imageURL}" class="img-thumbnail">
-                        </li>
-                    </ul>
+            <div class="border">
+		    <h2>Personnages:</h2>
+		    <div class="character-table">
+		        <div class="row">
+		            <div th:each="character : ${characters}" class="col-md-3 mb-4">
+		                <div class="character-cell">
+		                    <img class="character-image" th:src="${character.imageURL}" alt="Character Image" width="150" height="150" />
+		                    <div class="character-name text-center" th:text="${character.name}"></div>
+		            	</div>
+		        	</div>
                 </div>
             </div>
+            
             <div class="border">
                 <h2 class="ml-2 mt-2">Critiques:</h2>
                 <div class="container mt-4">
