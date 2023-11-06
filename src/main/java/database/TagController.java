@@ -42,7 +42,7 @@ public class TagController {
         tag.setName(name);
         tagRepository.save(tag);
 
-        return "redirect:/categories";
+        return "redirect:/categories/0";
     }
     @PostMapping("/catégorie")
     public String addCatégorieAnime(@RequestParam("catégorie") Long tagId, @RequestParam("animeId") Long animeId) {
